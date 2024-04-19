@@ -1,0 +1,116 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+  {{ user }} | Order History
+{% endblock %}
+
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="{% url 'login_user' %}">Account</a>
+        </li>
+        <li>
+          <a href="{{url}}">Order History</a>
+        </li>
+      </ul>
+      <div class="row">
+        <div id="content" class="col-sm-9">
+          <h1 class="title">Order History</h1>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <td class="text-center">Image</td>
+                  <td class="text-left">Product Name</td>
+                  <td class="text-center">Order ID</td>
+                  <td class="text-center">Qty</td>
+                  <td class="text-center">Status</td>
+                  <td class="text-center">Date Added</td>
+                  <td class="text-right">Total</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                {% for order in orders %}
+                  {% for item in order.items.all %}
+                    <tr>
+                      <td class="text-center">
+                        <a href="{% url 'book_detail' item.book.id %}"><img style="height: 60px; width: 60px;" class="img-thumbnail" title="{{ item.book.title }}" alt="{{ item.book.title }}" src="{{ item.book.book_images.all.first.image.url }}" /></a>
+                      </td>
+                      <td class="text-left">
+                        <a href="{% url 'book_detail' item.book.id %}">{{ item.book.title }}</a>
+                      </td>
+                      <td class="text-center">#{{ order.order_id }}</td>
+                      <td class="text-center">{{ item.quantity }}</td>
+                      <td class="text-center">{{ order.status }}</td>
+                      <td class="text-center">{{ order.order_date|date:'d/m/Y' }}</td>
+                      <td class="text-right">${{ item.subtotal }}</td>
+                      <td class="text-center">
+                        <a class="btn btn-info" title="View" data-toggle="tooltip" href="{% url 'order_details' pk=order.id %}" data-original-title="View"><i class="fa fa-eye"></i></a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Middle Part End -->
+        <!-- Right Part Start -->
+        <aside class="col-sm-3 hidden-xs" id="column-right">
+          <h3 class="subtitle"><span>Account</span></h3>
+          <div class="list-group">
+            <ul class="list-item">
+              <li>
+                <a href="login.html">Login</a>
+              </li>
+              <li>
+                <a href="register.html">Register</a>
+              </li>
+              <li>
+                <a href="#">Forgotten Password</a>
+              </li>
+              <li>
+                <a href="#">My Account</a>
+              </li>
+              <li>
+                <a href="#">Address Books</a>
+              </li>
+              <li>
+                <a href="wishlist.html">Wish List</a>
+              </li>
+              <li>
+                <a href="#">Order History</a>
+              </li>
+              <li>
+                <a href="#">Downloads</a>
+              </li>
+              <li>
+                <a href="#">Reward Points</a>
+              </li>
+              <li>
+                <a href="#">Returns</a>
+              </li>
+              <li>
+                <a href="#">Transactions</a>
+              </li>
+              <li>
+                <a href="#">Newsletter</a>
+              </li>
+              <li>
+                <a href="#">Recurring payments</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- Right Part End -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

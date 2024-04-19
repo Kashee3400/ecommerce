@@ -1,0 +1,218 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load calculation %}
+
+{% block title %}
+  {{ user }} | Order Details
+{% endblock %}
+
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="{% url 'login_user' %}">Account</a>
+        </li>
+        <li>
+          <a href="{% url 'my_order_list' %}">Order History</a>
+        </li>
+        <li>
+          <a href="{{request.path}}">Order Information</a>
+        </li>
+      </ul>
+
+      <div class="row">
+        <div id="content" class="col-sm-9">
+          <h1 class="title">Order Information</h1>
+
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <td colspan="2" class="text-left">Order Details</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="width: 50%;" class="text-left">
+                  <b>Order ID:</b> {{order.order_id}}<br />
+                  <b>Date Added:</b> {{order.order_date}}
+                </td>
+                <td style="width: 50%;" class="text-left">
+                  <b>Payment Method:</b> {{order.payment_method}}<br />
+                  <b>Shipping Method:</b> Flat Shipping Rate
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                {% comment %} <td style="width: 50%; vertical-align: top;" class="text-left">Payment Address</td> {% endcomment %}
+                <td style="width: 50%; vertical-align: top;" class="text-left">Shipping Address</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% comment %} <td class="text-left">
+                  Jhone Cary<br />Central Square<br />22 Hoi Wing Road<br />New Delhi<br />India
+                </td> {% endcomment %}
+                <td class="text-left">
+                  {{order.address.street}}<br />{{order.address.city}}<br />{{order.address.state}}<br />{{order.address.country}}<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <td class="text-left">Product Name</td>
+                  <td class="text-right">Quantity</td>
+                  <td class="text-right">Price</td>
+                  <td class="text-right">Total</td>
+                  <td style="width: 20px;"></td>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in order.items.all %}
+                <tr>
+                  <td class="text-left">{{item.book.title}}</td>
+                  <td class="text-right">{{item.quantity}}</td>
+                  <td class="text-right">&#8377; {{ item.book.price }}</td>
+                  <td class="text-right">&#8377;{{item.book|discount}}</td>
+                  <td style="white-space: nowrap;" class="text-right">
+                    <a class="btn btn-primary" title="" data-toggle="tooltip" href="#" data-original-title="Reorder"><i class="fa fa-shopping-cart"></i></a>
+                    <a class="btn btn-danger" title="" data-toggle="tooltip" href="return.html" data-original-title="Return"><i class="fa fa-reply"></i></a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+              <tfoot>
+                {% comment %} <tr>
+                  <td colspan="3"></td>
+                  <td class="text-right">
+                    <b>Sub-Total</b>
+                  </td>
+                  <td class="text-right">$101.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="3"></td>
+                  <td class="text-right">
+                    <b>Flat Shipping Rate</b>
+                  </td>
+                  <td class="text-right">$5.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="3"></td>
+                  <td class="text-right">
+                    <b>Eco Tax (-2.00)</b>
+                  </td>
+                  <td class="text-right">$6.00</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="3"></td>
+                  <td class="text-right">
+                    <b>VAT (20%)</b>
+                  </td>
+                  <td class="text-right">$21.20</td>
+                  <td></td>
+                </tr>
+                <tr> {% endcomment %}
+                  <td colspan="3"></td>
+                  <td class="text-right">
+                    <b>Total</b>
+                  </td>
+                  <td class="text-right">&#8377;{% total_order_item_price order.id %}</td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <h3>Order History</h3>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <td class="text-left">Date Added</td>
+                <td class="text-left">Status</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-left">{{order.order_date}}</td>
+                <td class="text-left">{{order.status}}</td>
+              </tr>
+              {% comment %} <tr>
+                <td class="text-left">21/06/2016</td>
+                <td class="text-left">Shipped</td>
+              </tr>
+              <tr>
+                <td class="text-left">24/06/2016</td>
+                <td class="text-left">Complete</td>
+              </tr> {% endcomment %}
+            </tbody>
+          </table>
+          <div class="buttons clearfix">
+            <div class="pull-right">
+              <a class="btn btn-primary" href="#">Continue</a>
+            </div>
+          </div>
+        </div>
+        <!-- Middle Part End -->
+        <!-- Right Part Start -->
+        <aside class="col-sm-3 hidden-xs" id="column-right">
+          <h3 class="subtitle"><span>Account</span></h3>
+          <div class="list-group">
+            <ul class="list-item">
+              <li>
+                <a href="login.html">Login</a>
+              </li>
+              <li>
+                <a href="register.html">Register</a>
+              </li>
+              <li>
+                <a href="#">Forgotten Password</a>
+              </li>
+              <li>
+                <a href="#">My Account</a>
+              </li>
+              <li>
+                <a href="#">Address Books</a>
+              </li>
+              <li>
+                <a href="wishlist.html">Wish List</a>
+              </li>
+              <li>
+                <a href="#">Order History</a>
+              </li>
+              <li>
+                <a href="#">Downloads</a>
+              </li>
+              <li>
+                <a href="#">Reward Points</a>
+              </li>
+              <li>
+                <a href="#">Returns</a>
+              </li>
+              <li>
+                <a href="#">Transactions</a>
+              </li>
+              <li>
+                <a href="#">Newsletter</a>
+              </li>
+              <li>
+                <a href="#">Recurring payments</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- Right Part End -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

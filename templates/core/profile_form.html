@@ -1,0 +1,93 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}
+Nitin Gokarn | Address
+{% endblock %}
+
+{% block content_main %}
+<div id="container">
+  <div class="container">
+
+    <ul class="breadcrumb">
+      <li>
+        <a href="index.html"><i class="fa fa-home"></i></a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+    </ul>
+    <!-- Breadcrumb End -->
+    <div class="row">
+        <div id="content" class="col-sm-12">
+          <h1 class="title">{{text_label}}</h1>
+          <div class="row">
+            <div class="col-sm-12">
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h4 class="text-primary"><u>Personal Details</u></h4>
+                <div class="row">
+                  <div style="margin-top: 10px;" class="col-lg-6 col-sm-12 col-md-6">
+                    {{ form.first_name.label_tag }}
+                    {{ form.first_name }}
+                    {% if form.first_name.errors %}
+                      <div class="error">{{ form.first_name.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div style="margin-top: 10px;" class="col-lg-6 col-sm-12 col-md-6">
+                    {{ form.last_name.label_tag }}
+                    {{ form.last_name }}
+                    {% if form.last_name.errors %}
+                      <div class="error">{{ form.last_name.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div style="margin-top: 10px;" class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                      <div class="error">{{ form.email.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div style="margin-top: 10px;" class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.dob.label_tag }}
+                    {{ form.dob }}
+                    {% if form.dob.errors %}
+                      <div class="error">{{ form.dob.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div style="margin-top: 10px;" class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.phone_number.label_tag }}
+                    {{ form.phone_number }}
+                    {% if form.phone_number.errors %}
+                      <div class="error">{{ form.phone_number.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div style="margin-top: 10px;" class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.gender.label_tag }}
+                    {{ form.gender }}
+                    {% if form.gender.errors %}
+                      <div class="error">{{ form.gender.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div style="margin-top: 10px;" class="col-lg-12 col-sm-12 col-md-6">
+                    {{ form.profile_image.label_tag }}
+                    {{ form.profile_image }}
+                    {% if form.profile_image.errors %}
+                      <div class="error">{{ form.profile_image.errors }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+                <br/><br/>
+                <div class="container">
+                  <button type="submit" class="btn btn-primary">{{text_label}}</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+{% endblock content_main %}

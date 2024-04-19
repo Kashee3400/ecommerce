@@ -1,0 +1,124 @@
+{% load static %}
+{% load calculation %}
+<div id="header">
+  <header class="header-row">
+    <div class="row">
+      <div class="col-md-2 col-sm-4 col-xs-12">
+        <div id="logo">
+          <a href="{% url 'dashboard' %}"><img class="img-responsive" src="{% static 'images/logo.png' %}" title="nitin" alt="nitin" /></a>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-12">
+        <form action="{% url 'product_list' %}" method="get">
+          <div id="search" class="input-group">
+            <input id="filter_name" type="text" name="search" value="" placeholder="Search" class="form-control input-lg" />
+            <button type="button" class="button-search"><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+
+      {% if user.is_authenticated %}
+        {% if user.user_cart_item %}
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div id="cart">
+              <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="heading dropdown-toggle">
+                <span class="cart-icon pull-left flip"></span>
+                <span id="cart-total">{{ user.user_cart_item.count }} item(s)</span> <i class="fa fa-caret-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <table class="table">
+                    <tbody>
+                      {% for item in user.user_cart_item.all|slice:':2' %}
+                        <tr>
+                          <td class="text-center">
+                            <a href="{% url 'book_detail' item.book.id %}"><img style="max-width: 35%; height: auto;" class="img-thumbnail" title="{{ item.book.title }}" alt="{{ item.book.title }}" src="{{ item.book.book_images.first.image.url }}" /></a>
+                          </td>
+                          <td class="text-left">
+                            <a href="{% url 'book_detail' item.book.id %}">{{ item.book.title }}</a>
+                          </td>
+                          <td class="text-right">x {{ item.quantity }}</td>
+                          <td class="text-right">{{ item.book|discount }}</td>
+                          <form action="{% url 'remove_from_cart' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="book_id" value="{{ item.book.id }}" />
+                            <td class="text-center">
+                              <button class="btn btn-danger btn-xs remove" title="Remove" type="submit"><i class="fa fa-times"></i></button>
+                            </td>
+                          </form>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </li>
+                <li>
+                  <div>
+                    <p class="checkout">
+                      <a href="{% url 'user_cart' %}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> View Cart</a>&nbsp;&nbsp;&nbsp;<a href="{% url 'user_checkout' %}" class="btn btn-primary"><i class="fa fa-share"></i> Checkout</a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+        <div class="col-md-2 col-sm-4 col-xs-12">
+          <div class="btn-group">
+            <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+              <span class="d-flex align-items-center">
+                {% if user.user_profile.profile_image %}
+                  <img class="profile-image" src="{{ user.user_profile.profile_image.url }}" alt="Profile Image" title="Profile Image" />
+                {% endif %}
+                <span class="name">
+                  {% if user.first_name %}
+                    {{ user.first_name }}
+                  {% else %}
+                    {{ user.username }}
+                  {% endif %}
+                </span>
+                <i class="fa fa-caret-down ml-2"></i>
+              </span>
+            </button>
+            <div class="dropdown-menu">
+              <li>
+                <a href="{% url 'profile' %}" class="btn btn-link" type="button" name="GB">My Profile</a>
+              </li>
+              <li>
+                <a href="{% url 'address_list' %}" class="btn btn-link" name="GB">My Address</a>
+              </li>
+              {% if user.is_superuser %}
+                <li>
+                  <a href="{% url 'admin:index' %}" target="_blank" class="btn btn-link btn-block">Administration</a>
+                </li>
+                <li>
+                  <a href="{% url 'order_list' %}" class="btn btn-link">All Orders</a>
+                </li>
+                <li>
+                  <a href="{% url 'book_list' %}" class="btn btn-link">All Books</a>
+                </li>
+                <li>
+                  <a href="{% url 'add_book' %}" class="btn btn-link">Upload Books</a>
+                </li>
+              {% else %}
+                <li>
+                  <a href="{% url 'my_order_list' %}" class="btn btn-link" type="button" name="GB">My Orders</a>
+                </li>
+              {% endif %}
+              <form action="{% url 'logout_user' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-yellow text-dark">Logout</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      {% elif not user.is_authenticated %}
+        <div class="col-md-5 col-sm-8 col-xs-12 mx-md-auto text-md-left text-center">
+          <a style="margin-top: 5px;" class="btn btn-yellow" href="{% url 'login_user' %}">Login</a>
+          <a style="margin-top: 5px;" class="btn btn-yellow" href="{% url 'register' %}">Register</a>
+        </div>
+      {% endif %}
+    </div>
+  </header>
+  <!-- Main Menu End -->
+</div>
+<!-- Header End -->

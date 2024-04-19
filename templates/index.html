@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="images/favicon.png" rel="icon" />
+    <title>Bigshop - eCommerce HTML Template</title>
+    <meta name="description" content="A Clean and fully responsive eCommerce Html Template for online store." />
+
+    <!--  Stylesheets
+=============================================  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bigshop/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bigshop/css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bigshop/css/stylesheet.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bigshop/css/owl.carousel.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bigshop/css/owl.transitions.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bigshop/css/responsive.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bigshop/css/stylesheet-skin2.css' %}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter" type="text/css" />
+  </head>
+  <body>
+    <!--  Document Wrapper
+=============================================  -->
+    <div class="wrapper-wide">
+      <!--  Header
+=============================================  -->
+      <div id="header">
+        <header class="header-row">
+          <div class="container">
+            <div class="table-container">
+              <!--  Top Bar
+          =============================================  -->
+              <nav class="htop col-md-9 pull-right flip inner" id="top">
+                <span class="drop-icon visible-sm visible-xs"><i class="fa fa-align-justify"></i></span>
+                <div id="top-links" class="nav pull-right flip">
+                  <ul>
+                    <li>
+                      <a href="login.html">Login</a>
+                    </li>
+                    <li>
+                      <a href="register.html">Register</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pull-right flip left-top">
+                  <div class="links">
+                    <ul>
+                      <li>
+                        <a href="#" target="_self">Custom Links</a>
+                      </li>
+                      <li class="wrap_custom_block hidden-sm hidden-xs">
+                        <a>Custom Block<b></b></a>
+                        <div class="dropdown-menu custom_block">
+                          <ul>
+                            <li>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <h3>Custom Block</h3>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <img src="images/sb.jpg" />
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p>This is a CMS block edited from theme admin panel. You can insert any content (HTML, Text, Images) Here. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                      <p>
+                                        <a target="" href="#">Read More</a>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="wishlist.html" id="wishlist-total">Wish List (0)</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="language" class="btn-group">
+                    <button class="btn-link dropdown-toggle" data-toggle="dropdown"><span><img src="images/gb.png" alt="English" title="English" />English <i class="fa fa-caret-down"></i></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <button class="btn btn-link btn-block language-select" type="button" name="GB"><img src="images/gb.png" alt="English" title="English" /> English</button>
+                      </li>
+                      <li>
+                        <button class="btn btn-link btn-block language-select" type="button" name="GB"><img src="images/ar.png" alt="Arabic" title="Arabic" /> Arabic</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="currency" class="btn-group">
+                    <button class="btn-link dropdown-toggle" data-toggle="dropdown"><span>$ USD <i class="fa fa-caret-down"></i></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro</button>
+                      </li>
+                      <li>
+                        <button class="currency-select btn btn-link btn-block" type="button" name="GBP">£ Pound Sterling</button>
+                      </li>
+                      <li>
+                        <button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US Dollar</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <!-- Top Bar End -->
+
+              <!--  Logo
+          =============================================  -->
+              <div class="col-table-cel col-md-3 col-sm-4 col-xs-12 inner">
+                <div id="logo">
+                  <a href="index.html"><img class="img-responsive" src="images/logo.png" title="Bigshop" alt="Bigshop" /></a>
+                </div>
+              </div>
+              <!-- Logo End -->
+
+              <!--  Phone and Email
+          =============================================  -->
+              <div class="col-md-4 col-md-push-5 col-sm-8 col-xs-12 inner">
+                <div class="links_contact pull-right flip">
+                  <ul>
+                    <li class="mobile">
+                      <i class="fa fa-phone"></i>+91 98989898
+                    </li>
+                    <li class="email">
+                      <a href="mailto:support@bigshop.com"><i class="fa fa-envelope"></i>support@bigshop.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Phone and Email End -->
+
+              <div class="clearfix visible-sm-block visible-xs-block"></div>
+
+              <!--  Search Bar
+          =============================================  -->
+              <div class="col-md-5 col-md-pull-4 col-sm-8 col-xs-12 inner2">
+                <div id="search" class="input-group">
+                  <input id="filter_name" type="text" name="search" value="" placeholder="Search" class="form-control input-lg" />
+                  <button type="button" class="button-search"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+              <!-- Search Bar End -->
+
+              <!--  Mini Cart
+          =============================================  -->
+              <div class="col-md-9 pull-right col-sm-4 col-xs-12 inner">
+                <div id="cart">
+                  <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="heading dropdown-toggle">
+                    <span class="cart-icon pull-left flip"></span>
+                    <span id="cart-total">2 item(s) - $1,132.00</span> <i class="fa fa-caret-down"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td class="text-center">
+                              <a href="product.html"><img class="img-thumbnail" title="Xitefun Causal Wear Fancy Shoes" alt="Xitefun Causal Wear Fancy Shoes" src="images/sony_vaio_1-60x60.jpg" /></a>
+                            </td>
+                            <td class="text-left">
+                              <a href="product.html">Xitefun Causal Wear Fancy Shoes</a>
+                            </td>
+                            <td class="text-right">x 1</td>
+                            <td class="text-right">$902.00</td>
+                            <td class="text-center">
+                              <button class="btn btn-danger btn-xs remove" title="Remove" onclick="" type="button"><i class="fa fa-times"></i></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">
+                              <a href="product.html"><img class="img-thumbnail" title="Aspire Ultrabook Laptop" alt="Aspire Ultrabook Laptop" src="images/samsung_tab_1-60x60.jpg" /></a>
+                            </td>
+                            <td class="text-left">
+                              <a href="product.html">Aspire Ultrabook Laptop</a>
+                            </td>
+                            <td class="text-right">x 1</td>
+                            <td class="text-right">$230.00</td>
+                            <td class="text-center">
+                              <button class="btn btn-danger btn-xs remove" title="Remove" onclick="" type="button"><i class="fa fa-times"></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li>
+                      <div>
+                        <table class="table table-bordered">
+                          <tbody>
+                            <tr>
+                              <td class="text-right">
+                                <strong>Sub-Total</strong>
+                              </td>
+                              <td class="text-right">$940.00</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right">
+                                <strong>Eco Tax (-2.00)</strong>
+                              </td>
+                              <td class="text-right">$4.00</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right">
+                                <strong>VAT (20%)</strong>
+                              </td>
+                              <td class="text-right">$188.00</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right">
+                                <strong>Total</strong>
+                              </td>
+                              <td class="text-right">$1,132.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p class="checkout">
+                          <a href="cart.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> View Cart</a>�&nbsp;�&nbsp;�&nbsp;<a href="checkout.html" class="btn btn-primary"><i class="fa fa-share"></i> Checkout</a>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Mini Cart End -->
+            </div>
+          </div>
+        </header>
+
+        <!--  Main Menu
+    =============================================  -->
+
+        <!--  Content
+  =============================================  -->
+        <div id="container">
+          <div class="container">
+            <div class="row">
+              <!--  Middle Part
+        =============================================  -->
+              <div id="content" class="col-sm-12">
+                <!--  Slideshow
+          =============================================  -->
+                <div class="slideshow single-slider owl-carousel">
+                  <div class="item">
+                    <a href="#"><img class="img-responsive" src="{% static 'bigshop/images/banner-1.jpg' %}" alt="banner 1" /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"><img class="img-responsive" src="{% static 'bigshop/images/banner-2.jpg' %}" alt="banner 2" /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"><img class="img-responsive" src="{% static 'bigshop/images/banner-3.jpg' %}" alt="banner 3" /></a>
+                  </div>
+                </div>
+                <!-- Slideshow End -->
+
+                <!-- Featured Product Start -->
+                <h3 class="subtitle"><span>Featured</span></h3>
+                <div class="owl-carousel product_carousel">
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/apple_cinema_30-175x175.jpg" alt="Apple Cinema 30" title="Apple Cinema 30" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Apple Cinema 30"</a></h4>
+                      <p class="price">
+                        <span class="price-new">$110.00</span> <span class="price-old">$122.00</span><span class="saving">-10%</span>
+                      </p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/canon_eos_5d_1-175x175.jpg" alt="Canon EOS 5D" title="Canon EOS 5D" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Canon EOS 5D</a></h4>
+                      <p class="price">
+                        <span class="price-new">$98.00</span> <span class="price-old">$122.00</span><span class="saving">-20%</span>
+                      </p>
+                      <div class="rating">
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                      </div>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/htc_touch_hd_1-175x175.jpg" alt="HTC Touch HD" title="HTC Touch HD" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">HTC Touch HD</a></h4>
+                      <p class="price">$122.00</p>
+                      <div class="rating">
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                      </div>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/imac_1-175x175.jpg" alt="iMac" title="iMac" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">iMac</a></h4>
+                      <p>
+                        <span class="price-new">$92.00</span> <span class="price-old">$122.00</span><span class="saving">-25%</span>
+                      </p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/hp_1-175x175.jpg" alt="HP LP3065" title="HP LP3065" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">HP LP3065</a></h4>
+                      <p class="price">$122.00</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/samsung_tab_1-175x175.jpg" alt="Samsung Galaxy Tab 10.1" title="Samsung Galaxy Tab 10.1" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Samsung Galaxy Tab 10.1</a></h4>
+                      <p class="price">
+                        <span class="price-new">$218.00</span> <span class="price-old">$241.99</span>
+                        <span class="saving">-10%</span>
+                      </p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/samsung_syncmaster_941bw-175x175.jpg" alt="Samsung SyncMaster 941BW" title="Samsung SyncMaster 941BW" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Samsung SyncMaster 941BW</a></h4>
+                      <p class="price">$242.00</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/sony_vaio_1-175x175.jpg" alt="Sony VAIO" title="Sony VAIO" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Sony VAIO</a></h4>
+                      <p class="price">$1,202.00</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Featured Product End -->
+
+                <!--  Bigshop Banner
+          =============================================  -->
+
+                <div class="bigshop-banner">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <a href="#"><img src="images/watches-360x200.jpg" alt="watches" title="watches" /></a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <a href="#"><img src="images/jackets-360x200.jpg" alt="jackets" title="jackets" /></a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <a href="#"><img src="images/shoes-360x200.jpg" alt="shoes" title="shoes" /></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 moderns">
+                      <a href="#"><img src="images/small-banner1-500x150.jpg" alt="sample banner" title="sample banner" /></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 moderns">
+                      <a href="#"><img src="images/small-banner-500x150.jpg" alt="sample banner 2" title="sample banner 2" /></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bigshop Banner End -->
+
+                <!-- Latest Product Start -->
+                <h3 class="subtitle"><span>Latest</span></h3>
+                <div class="owl-carousel product_carousel">
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/samsung_tab_1-175x175.jpg" alt="Samsung Galaxy Tab 10.1" title="Samsung Galaxy Tab 10.1" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Samsung Galaxy Tab 10.1</a></h4>
+                      <p class="price">
+                        <span class="price-new">$218.00</span> <span class="price-old">$241.99</span><span class="saving">-10%</span>
+                      </p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/ipod_classic_1-175x175.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">iPod Classic</a></h4>
+                      <p class="price">$122.00</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/hp_1-175x175.jpg" alt="HP LP3065" title="HP LP3065" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">HP LP3065</a></h4>
+                      <p class="price">$122.00</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/sony_vaio_1-175x175.jpg" alt="Sony VAIO" title="Sony VAIO" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Sony VAIO</a></h4>
+                      <p class="price">$1,202.00</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/macbook_pro_1-175x175.jpg" alt="MacBook Pro" title="MacBook Pro" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">MacBook Pro</a></h4>
+                      <p class="price">$2,000.00</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/macbook_air_1-175x175.jpg" alt="MacBook Air" title="MacBook Air" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">MacBook Air</a></h4>
+                      <p class="price">
+                        <span class="price-new">$782.00</span> <span class="price-old">$1,202.00</span><span class="saving">-35%</span>
+                      </p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/macbook_1-175x175.jpg" alt="MacBook" title="MacBook" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">MacBook</a></h4>
+                      <p class="price">$602.00</p>
+                      <div class="rating">
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                      </div>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/apple_cinema_30-175x175.jpg" alt="Apple Cinema 30" title="Apple Cinema 30" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">Apple Cinema 30"</a></h4>
+                      <p class="price">
+                        <span class="price-new">$110.00</span> <span class="price-old">$122.00</span><span class="saving">-10%</span>
+                      </p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/imac_1-175x175.jpg" alt="iMac" title="iMac" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">iMac</a></h4>
+                      <p class="price">
+                        <span class="price-new">$92.00</span> <span class="price-old">$122.00</span><span class="saving">-25%</span>
+                      </p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-thumb clearfix">
+                    <div class="image">
+                      <a href="product.html"><img src="images/iphone_1-175x175.jpg" alt="iPhone" title="iPhone" class="img-responsive" /></a>
+                    </div>
+                    <div class="caption">
+                      <h4><a href="product.html">iPhone</a></h4>
+                      <p class="price">$123.20</p>
+                    </div>
+                    <div class="button-group">
+                      <button class="btn-primary" type="button" onclick=""><span>Add to Cart</span></button>
+                      <div class="add-to-links">
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List" onclick=""><i class="fa fa-heart"></i></button>
+                        <button type="button" data-toggle="tooltip" title="Compare this Product" onclick=""><i class="fa fa-exchange"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Latest Product End -->
+
+                <!--  Brand Logo Carousel
+          =============================================  -->
+                <div id="carousel" class="owl-carousel nxt">
+                  <div class="item text-center">
+                    <a href="#"><img src="images/nfl-130x100.png" alt="Palm" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/redbull-130x100.png" alt="Sony" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/sony-130x100.png" alt="Canon" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/cocacola-130x100.png" alt="Apple" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/burgerking-130x100.png" alt="HTC" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/canon-130x100.png" alt="Hewlett-Packard" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/harley-130x100.png" alt="brand" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/dell-130x100.png" alt="brand1" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/disney-130x100.png" alt="brand1" class="img-responsive" /></a>
+                  </div>
+                  <div class="item text-center">
+                    <a href="#"><img src="images/nintendo-130x100.png" alt="brand1" class="img-responsive" /></a>
+                  </div>
+                </div>
+                <!-- Brand Logo Carousel End -->
+              </div>
+              <!-- Middle Part End -->
+            </div>
+          </div>
+        </div>
+        <!-- Content End -->
+
+        <!--  Footer
+  =============================================  -->
+        <footer id="footer">
+          <!--  Footer Part 1
+  =============================================  -->
+          <div class="fpart-first">
+            <div class="container">
+              <div class="row">
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                  <h5>Information</h5>
+                  <ul>
+                    <li>
+                      <a href="about-us.html">About Us</a>
+                    </li>
+                    <li>
+                      <a href="about-us.html">Delivery Information</a>
+                    </li>
+                    <li>
+                      <a href="about-us.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="about-us.html">Terms &amp; Conditions</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                  <h5>Customer Service</h5>
+                  <ul>
+                    <li>
+                      <a href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li>
+                      <a href="returns.html">Returns</a>
+                    </li>
+                    <li>
+                      <a href="sitemap.html">Site Map</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                  <h5>Extras</h5>
+                  <ul>
+                    <li>
+                      <a href="manufacturer.html">Brands</a>
+                    </li>
+                    <li>
+                      <a href="gift-voucher.html">Gift Vouchers</a>
+                    </li>
+                    <li>
+                      <a href="#">Affiliates</a>
+                    </li>
+                    <li>
+                      <a href="#">Specials</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                  <h5>My Account</h5>
+                  <ul>
+                    <li>
+                      <a href="#">My Account</a>
+                    </li>
+                    <li>
+                      <a href="#">Wish List</a>
+                    </li>
+                    <li>
+                      <a href="#">Order History</a>
+                    </li>
+                    <li>
+                      <a href="#">Newsletter</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="contact col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <h5>Contact Details</h5>
+                  <ul>
+                    <li class="address">
+                      <i class="fa fa-map-marker"></i>Bigshop Plaza, 22 Hoi Wing Road, Delhi, India.
+                    </li>
+                    <li class="mobile">
+                      <i class="fa fa-phone"></i>+91 9898989898
+                    </li>
+                    <li class="email">
+                      <i class="fa fa-envelope"></i><a href="mailto:info@bigshop.com">info@bigshop.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Part 1 End -->
+
+          <!--  Footer Part 2
+    =============================================  -->
+          <div class="fpart-second">
+            <div class="container">
+              <div id="powered">
+                <div class="row">
+                  <!--  Payments Types
+          =============================================  -->
+                  <div class="col-md-4">
+                    <div class="payments_types">
+                      <a href="#" target="_blank"><img data-toggle="tooltip" src="images/payment_paypal.png" alt="paypal" title="PayPal" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/payment_american.png" alt="american-express" title="American Express" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/payment_2checkout.png" alt="2checkout" title="2checkout" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/payment_maestro.png" alt="maestro" title="Maestro" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/payment_discover.png" alt="discover" title="Discover" /></a>
+                    </div>
+                  </div>
+                  <!-- Payments Types End -->
+
+                  <!--  Payments Types
+            =============================================  -->
+                  <div class="powered_text pull-left flip col-md-4">Bigshop Template © 2017, Template By HarnishDesign</div>
+
+                  <!--  Social Icon
+            =============================================  -->
+                  <div class="col-md-4">
+                    <div class="social pull-right flip">
+                      <a href="https://www.facebook.com/harnishdesign/" target="_blank"><img data-toggle="tooltip" src="images/facebook.png" alt="Facebook" title="Facebook" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/twitter.png" alt="Twitter" title="Twitter" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/google_plus.png" alt="Google+" title="Google+" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/pinterest.png" alt="Pinterest" title="Pinterest" /></a> <a href="#" target="_blank"><img data-toggle="tooltip" src="images/rss.png" alt="RSS" title="RSS" /></a>
+                    </div>
+                  </div>
+                  <!-- Payments Types End -->
+                </div>
+              </div>
+
+              <!--  Custom Block
+        =============================================  -->
+              <div class="custom-text">
+                <p>
+                  <b>Custom Block</b><br />You can insert any content (HTML, Text, Images) Here. Lorem Ipsum is simply dummy text of the <a target="_blank" href="#">printing and typesetting</a> industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Online shopping worldwide</b><br />Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a target="_blank" href="#">Lorem Ipsum</a> has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+                <p class="text-center">
+                  <img src="images/small-logo.png" />
+                </p>
+              </div>
+              <!-- Custom Block End -->
+            </div>
+          </div>
+          <!-- Footer Part 2 End -->
+
+          <!--  Back to Top
+    =============================================  -->
+          <div id="back-top">
+            <a data-toggle="tooltip" title="Back to Top" href="javascript:void(0)" class="backtotop"><i class="fa fa-chevron-up"></i></a>
+          </div>
+        </footer>
+        <!-- Footer End -->
+      </div>
+
+      <script type="text/javascript" src="{% static 'bigshop/js/jquery-2.1.1.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'bigshop/js/bootstrap.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'bigshop/js/jquery.easing-1.3.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'bigshop/js/jquery.dcjqaccordion.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'bigshop/js/owl.carousel.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'bigshop/js/custom.js' %}"></script>
+    </div>
+  </body>
+</html>

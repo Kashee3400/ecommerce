@@ -1,0 +1,81 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}
+Nitin Gokarn | Address
+{% endblock %}
+
+{% block content_main %}
+<div id="container">
+  <div class="container">
+
+    <ul class="breadcrumb">
+      <li>
+        <a href="index.html"><i class="fa fa-home"></i></a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+    </ul>
+    <!-- Breadcrumb End -->
+    <div class="row">
+        <div id="content" class="col-sm-12">
+          <h1 class="title">{{text_label}}</h1>
+          <div class="row">
+            <div class="col-sm-12">
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h4 class="text-primary"><u>Address Details</u></h4>
+                {% comment %} {{ form.as_p }} {% endcomment %}
+
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    {{ form.street.label_tag }}
+                    {{ form.street }}
+                    {% if form.street.errors %}
+                      <div class="error">{{ form.street.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-6">
+                    {{ form.city.label_tag }}
+                    {{ form.city }}
+                    {% if form.city.errors %}
+                      <div class="error">{{ form.city.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.state.label_tag }}
+                    {{ form.state }}
+                    {% if form.state.errors %}
+                      <div class="error">{{ form.state.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.country.label_tag }}
+                    {{ form.country }}
+                    {% if form.country.errors %}
+                      <div class="error">{{ form.country.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.postal_code.label_tag }}
+                    {{ form.postal_code }}
+                    {% if form.postal_code.errors %}
+                      <div class="error">{{ form.postal_code.errors }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+                <br/><br/>
+                <div class="container">
+                  <button type="submit" class="btn btn-primary">{{text_label}}</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+{% endblock content_main %}

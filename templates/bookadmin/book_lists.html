@@ -1,0 +1,84 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load calculation %}
+
+{% block title %}
+  Nitin Gokarn | All Books
+{% endblock %}
+
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="{% url 'book_list' %}">All Books</a>
+        </li>
+      </ul>
+      <!-- Breadcrumb End -->
+
+      <div class="row">
+        <!-- Middle Part Start -->
+        <div id="content" class="col-sm-12">
+          <h1 class="title">Book List</h1>
+          <div class="table-responsive">
+            <table id="book-table" style="width:100%" class="display table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <td class="text-center">Image</td>
+                  <td class="text-left">Title</td>
+                  <td class="text-left">Author</td>
+                  <td class="text-right">Category</td>
+                  <td class="text-right">Stock</td>
+                  <td class="text-right">Price</td>
+                  <td class="text-right">Discounted Price</td>
+                  <td class="text-right">Discount</td>
+                  <td class="text-right">Action</td>
+                </tr>
+              </thead>
+              <tbody>
+                {% if books %}
+                  {% for obj in books %}
+                    <tr>
+                      <td class="text-center">
+                        <a href="product.html"><img style="height: 60px; width: 60px;" class="img-thumbnail" src="{{obj.image.image.url}}" alt="Aspire Ultrabook Laptop" title="Aspire Ultrabook Laptop" /></a>
+                      </td>
+                      <td class="text-left">
+                        <a href="product.html">{{obj.book.title}}</a>
+                      </td>
+                      <td class="text-left">{{obj.book.author}}</td>
+                      <td class="text-left">{{obj.book.category}}</td>
+                      <td class="text-right">{{obj.book.stock}}</td>
+                      <td class="text-right">
+                        <div class="price">{{obj.book.price}}</div>
+                      </td>
+                      <td class="text-right">
+                        <div class="price">{{obj.book|discount}}</div>
+                      </td>
+                      <td class="text-right">
+                        <div class="price">{{obj.book.discount}}</div>
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-primary"  type="button" data-original-title="Edit"><i class="fa fa-shopping-cart"></i></button>
+                        <a class="btn btn-danger"  href="" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Middle Part End -->
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block xtra_js %}
+<script>
+    new DataTable('#book-table');
+</script>
+{% endblock xtra_js %}

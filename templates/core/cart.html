@@ -1,0 +1,101 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load calculation %}
+
+{% block title %}
+  Nitin Gokarn | {{ request.user }} Cart
+{% endblock %}
+
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="{% url 'user_cart' %}">Shopping Cart</a>
+        </li>
+      </ul>
+
+      <div class="row">
+        {% if user.user_cart_item.all %}
+          <div id="content" class="col-sm-12">
+            <h1 class="title">Shopping Cart</h1>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <td class="text-center">Image</td>
+                    <td class="text-left">Product Name</td>
+                    <td class="text-left">Quantity</td>
+                    <td class="text-right">Unit Price</td>
+                    <td class="text-right">Total</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in user.user_cart_item.all %}
+                    <tr>
+                      <td class="text-center">
+                        <a href="{% url 'book_detail' item.book.id %}"><img style="height: 60px; width: 60px;" src="{{ item.book.book_images.first.image.url }}" alt="{{ book.book.title }}" title="{{ book.book.title }}" class="img-thumbnail" /></a>
+                      </td>
+                      <td class="text-left">
+                        <a href="{% url 'book_detail' item.book.id %}">{{ item.book.title }}</a><br />
+                      </td>
+                      <td class="text-left">
+                        <div class="input-group btn-block quantity">
+                          <input type="text" name="quantity" value="{{ item.quantity }}" size="1" readonly class="form-control" />
+                          <span class="input-group-btn">
+                            <a href="{% url 'book_detail' item.book.id %}" title="Update" class="btn btn-primary"><i class="fa fa-refresh"></i></a>
+                            {% comment %} <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onclick=""><i class="fa fa-times-circle"></i></button> {% endcomment %}
+                          </span>
+                        </div>
+                      </td>
+                      <td class="text-right">&#8377; {{ item.book|discount }}</td>
+                      <td class="text-right">&#8377; {{ item|subtotal }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-8">
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td class="text-right">
+                        <strong>Total:</strong>
+                      </td>
+                      <td class="text-right">
+                        &#8377;{% total_cart_price request.user %}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="buttons">
+              <div class="pull-left">
+                <a href="{% url 'product_list' %}" class="btn btn-default">Continue Shopping</a>
+              </div>
+              <div class="pull-right">
+                <a href="{% url 'user_checkout' %}" class="btn btn-primary">Checkout</a>
+              </div>
+            </div>
+          </div>
+        {% else %}
+        <div class="container">
+          <h2>No Products In Cart</h2>
+        </div>
+        {% endif %}
+        <!-- Middle Part End -->
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block xtra_js %}
+  <script>
+    new DataTable('#book-table')
+  </script>
+{% endblock %}

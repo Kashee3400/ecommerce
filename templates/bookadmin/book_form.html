@@ -1,0 +1,118 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+  Nitin Gokarn | Books
+{% endblock %}
+
+{% block xtra_css %}
+<style>
+    .error{
+        color: red;
+    }
+</style>
+{% endblock xtra_css %}
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="!#">Upload Book</a>
+        </li>
+      </ul>
+      <div class="row">
+        <div id="content" class="col-sm-12">
+          <h1 class="title">Upload Book</h1>
+          <div class="row">
+            <div class="col-sm-12">
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h4 class="text-primary"><u>Book Details</u></h4>
+                {% comment %} {{ form.as_p }} {% endcomment %}
+
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12 col-md-6">
+                    {{ form.title.label_tag }}
+                    {{ form.title }}
+                    {% if form.title.errors %}
+                      <div class="error">{{ form.title.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.author.label_tag }}
+                    {{ form.author }}
+                    {% if form.author.errors %}
+                      <div class="error">{{ form.author.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.publisher.label_tag }}
+                    {{ form.publisher }}
+                    {% if form.publisher.errors %}
+                      <div class="error">{{ form.publisher.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.category.label_tag }}
+                    {{ form.category }}
+                    {% if form.category.errors %}
+                      <div class="error">{{ form.category.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.price.label_tag }}
+                    {{ form.price }}
+                    {% if form.price.errors %}
+                      <div class="error">{{ form.price.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.stock.label_tag }}
+                    {{ form.stock }}
+                    {% if form.stock.errors %}
+                      <div class="error">{{ form.stock.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-6">
+                    {{ form.discount.label_tag }}
+                    {{ form.discount }}
+                    {% if form.discount.errors %}
+                      <div class="error">{{ form.discount.errors }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="col-lg-12 col-sm-12 col-md-12">
+                    {{ form.description.label_tag }}
+                    {{ form.description }}
+                    {% if form.description.errors %}
+                      <div class="error">{{ form.description.errors }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+                <h4 class="text-primary"><u>Upload Images</u></h4>
+                <div class="row">
+                  {{ image_formset.management_form }}
+                  {% for form in image_formset %}
+                    <div class="col-lg-4 col-sm-12 col-md-6">
+                      {{ form.image.label_tag }}
+                      {{ form.image }}
+                      {% if form.image.errors %}
+                        <div class="error">{{ form.image.errors }}</div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+                <br>
+                <div class="container">
+                  <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

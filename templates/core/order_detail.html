@@ -1,0 +1,177 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load calculation %}
+{% block title %}
+{{user}} | Orders
+{% endblock %}
+{% block xtra_css %}
+
+{% endblock xtra_css %}
+{% block content_main %}
+<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+    <tbody>
+      <tr>
+        <td align="center" valign="top">
+          <table class="contenttable" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" style="border-width: 8px; border-style: solid; border-collapse: separate; border-color:#ececec; margin-top:40px; font-family:Arial, Helvetica, sans-serif">
+            <tbody>
+              <tr>
+                <td class="tablepadding" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;padding:13px 20px;">
+                  <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                      <tr>
+                        <td style="font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#676767">
+                          <span style="color:#707070">Order ID:</span><a style="outline:none; color:#037ad1; text-decoration:none;" href="#">{{ order.order_id }}</a>
+                        </td>
+                        <td style="font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#676767" align="right">
+                          <span style="color:#707070">Placed on:</span><span style="color:#000000;display:inline-block">{{ order.order_date }}</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table class="tablefull" width="50%" cellpadding="0" cellspacing="0" border="0" align="left">
+                            <tbody>
+                              <tr>
+                                <td class="tablepadding" style="padding:20px">
+                                  <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td valign="top" width="40" style="padding:3px 0 0 0">
+                                          <img src="images/home-icon.png" width="22" height="20" alt="" />
+                                        </td>
+                                        <td style="font-size:13.5px; font-family:Arial, Helvetica, sans-serif; line-height:1.5;color:#000000">
+                                          <span style="color:#909090">Delivery Address</span><br />
+                                          {{ order.address.street }}<br />
+                                          {{ order.address.city }}<br />
+                                          {{ order.address.state }}<br />
+                                          {{ order.address.country }}
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table class="tablefull" width="50%" cellpadding="0" cellspacing="0" border="0" align="left">
+                            <tbody>
+                              <tr>
+                                <td class="tablepadding" style="padding:20px">
+                                  <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td valign="top" width="40" style="padding:3px 0 0 0">
+                                          <img src="images/phone-icon.png" width="22" height="20" alt="" />
+                                        </td>
+                                        <td style="font-size:13.5px; font-family:Arial, Helvetica, sans-serif; line-height:1.5;color:#000000">
+                                          <span style="color:#909090">Phone Number</span><br />
+                                          (+91) {{ user.user_profile.phone_number }}
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
+                            <tbody>
+                              <tr>
+                                <td class="tablepadding" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;padding:13px 20px;font-size:13.5px; font-family:Arial, Helvetica, sans-serif; line-height:1.5;color:#676767">
+                                  <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          <span style="color:#909090">Payment Type</span>
+                                        </td>
+                                        <td align="right">
+                                          <span style="color:#000000">{{ order.payment_method.method }}</span>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="tablepadding" style="padding:20px;">
+                  <table class="" style="border-collapse:collapse;width:100%;border-top:1px solid #dddddd;border-left:1px solid #dddddd;">
+                    <thead>
+                      <tr>
+                        <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;background-color:#efefef;font-weight:bold;text-align:left;padding:7px;color:#222222">Product</td>
+                        <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;background-color:#efefef;font-weight:bold;text-align:right;padding:7px;color:#222222">Qty</td>
+                        <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;background-color:#efefef;font-weight:bold;text-align:right;padding:7px;color:#222222">Price</td>
+                        <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;background-color:#efefef;font-weight:bold;text-align:right;padding:7px;color:#222222">Total</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in order.items.all %}
+                        <tr>
+                          <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;text-align:left;padding:7px">
+                            {{item.book.title}} <br />
+                          </td>
+                          <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;text-align:right;padding:7px">{{item.quantity}}</td>
+                          <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;text-align:right;padding:7px">&#8377; {{ item.book|discount }}</td>
+                          <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;text-align:right;padding:7px">&#8377; {{ item|subtotal }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="3" style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;text-align:right;padding:7px">
+                          <b>Total:</b>
+                        </td>
+                        <td style="font-size:13px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;text-align:right;padding:7px">
+                              &#8377; {{total_price}}
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table width="100%" cellspacing="0" cellpadding="0" border="0" style="font-size:13px;color:#999999; font-family:Arial, Helvetica, sans-serif">
+            <tbody>
+              <tr>
+                <td bgcolor="#fcfcfc" class="tablepadding" style="padding:20px 0; border-top-width:1px;border-top-style:solid;border-top-color:#ececec;border-collapse:collapse">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0" style="font-size:13px;color:#999999; font-family:Arial, Helvetica, sans-serif">
+                    <tbody>
+                      <tr>
+                        <td align="center" class="tablepadding" style="line-height:20px; padding:20px;">Nitin Gokaran, Lucknow</td>
+                      </tr>
+                      <tr></tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="tablepadding" align="center" style="line-height:20px; padding:20px;">@Copyright reserver Nitin Gokaran</td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}

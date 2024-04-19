@@ -1,0 +1,719 @@
+<!-- myapp/templates/myapp/home.html -->
+<!DOCTYPE html>
+{%load  static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nitin Gokarn</title>
+    <meta name="author" content="Nitin Gokarn">
+    <meta name="generator" content="Starfield Technologies; Go Daddy Website Builder 8.0.0000">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" sizes="57x57"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:57,h:57,m">
+    <link rel="apple-touch-icon" sizes="60x60"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:60,h:60,m">
+    <link rel="apple-touch-icon" sizes="72x72"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:72,h:72,m">
+    <link rel="apple-touch-icon" sizes="114x114"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:114,h:114,m">
+    <link rel="apple-touch-icon" sizes="120x120"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:120,h:120,m">
+    <link rel="apple-touch-icon" sizes="144x144"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:144,h:144,m">
+    <link rel="apple-touch-icon" sizes="152x152"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:152,h:152,m">
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:180,h:180,m">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nitin Gokarn">
+    <meta name="twitter:description" content="World of Words and Wisdom">
+    <meta name="twitter:image"
+      content="https://img1.wsimg.com/isteam/ip/1e210ddf-6d7a-440a-8a60-46eaf8fb9f99/image-158.webp">
+    <meta name="twitter:image:alt" content="Nitin Gokarn">
+    <meta name="theme-color" content="#f5d8d0">
+</head>
+<body class="x  x-fonts-righteous  x-fonts-great-vibes">
+    <div id="layout-1-e-210-ddf-6-d-7-a-440-a-8-a-60-46-eaf-8-fb-9-f-99"
+      class="layout layout-layout layout-layout-layout-27 locale-en-IN lang-en">
+      <div data-ux="Page" id="page-22091"
+        class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-4 c1-5 c1-6 c1-7 c1-8 c1-9 c1-a c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+        <div data-ux="Block" class="x-el x-el-div page-inner c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+          <div id="5d92e2de-fc79-4811-a030-de4197535c40" class="widget widget-header widget-header-header-9">
+            <div data-ux="Header" role="main" data-aid="HEADER_WIDGET" id="n-22092"
+              class="x-el x-el-div x-el x-el c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div>
+                <div id="freemium-ad-22093"></div>
+                <section data-ux="Section" data-aid="HEADER_SECTION"
+                  class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-j c1-b c1-c c1-k c1-l c1-m c1-n c1-o c1-p c1-q c1-r c1-d c1-e c1-f c1-g">
+                  <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-s c1-t c1-b c1-c c1-u c1-d c1-e c1-f c1-g">
+                    <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                      <div data-ux="Container"
+                        class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-s c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                        <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-14 c1-b c1-c c1-d c1-15 c1-e c1-f c1-g">
+                          <nav data-ux="Block"
+                            class="x-el x-el-nav c1-1 c1-2 c1-4 c1-16 c1-17 c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <div data-ux="Block"
+                              class="x-el x-el-div c1-1 c1-2 c1-18 c1-19 c1-1a c1-1b c1-1c c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-19 c1-1d c1-1e c1-b c1-c c1-d c1-e c1-f c1-g"></div>
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-1f c1-1g c1-1h c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <div data-ux="Block" data-aid="HEADER_LOGO_RENDERED"
+                                  class="x-el x-el-div c1-1i c1-1j c1-1k c1-1l c1-4 c1-1m c1-1n c1-1o c1-1p c1-1q c1-1r c1-1s c1-1t c1-1u">
+                                  <a rel="" role="link" aria-haspopup="menu" data-ux="Link"
+                                    data-page="5b1964fc-96a0-4a42-962d-17657b6bcf79" title="Nitin Gokarn" href="/"
+                                    data-typography="LinkAlpha"
+                                    class="x-el x-el-a c1-1v c1-1w c1-1x c1-1y c1-1z c1-20 c1-21 c1-22 c1-23 c1-24 c1-25 c1-z c1-4 c1-b c1-26 c1-c c1-27 c1-28 c1-29 c1-d c1-e c1-f c1-g"
+                                    data-tccl="ux2.HEADER.header9.Logo.Default.Link.Default.22095.click,click">
+                                    <div data-ux="Block" id="logo-container-22096"
+                                      class="x-el x-el-div c1-1 c1-2 c1-1k c1-4 c1-s c1-b c1-c c1-d c1-e c1-f c1-g">
+                                      <h3 role="heading" aria-level="3" data-ux="LogoHeading" id="logo-text-22097"
+                                        data-aid="HEADER_LOGO_TEXT_RENDERED" data-typography="LogoAlpha"
+                                        class="x-el x-el-h3 c1-2a c1-2 c1-1y c1-1z c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2i c1-1k c1-2j c1-2k c1-2l c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r">
+                                        Nitin Gokarn</h3><span role="heading" aria-level="NaN" data-ux="scaler"
+                                        data-size="xxlarge" data-scaler-id="scaler-logo-container-22096"
+                                        aria-hidden="true" data-typography="LogoAlpha"
+                                        class="x-el x-el-span c1-2a c1-2 c1-2s c1-2t c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2u c1-14 c1-2j c1-2v c1-2w c1-2x c1-2y c1-2l c1-2k c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r">Nitin
+                                        Gokarn</span><span role="heading" aria-level="NaN" data-ux="scaler"
+                                        data-size="xlarge" data-scaler-id="scaler-logo-container-22096" aria-hidden="true"
+                                        data-typography="LogoAlpha"
+                                        class="x-el x-el-span c1-2a c1-2 c1-2s c1-2t c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2u c1-14 c1-2j c1-2v c1-2w c1-2x c1-2y c1-2z c1-2k c1-2m c1-30 c1-2o c1-31 c1-32 c1-33">Nitin
+                                        Gokarn</span><span role="heading" aria-level="NaN" data-ux="scaler"
+                                        data-size="large" data-scaler-id="scaler-logo-container-22096" aria-hidden="true"
+                                        data-typography="LogoAlpha"
+                                        class="x-el x-el-span c1-2a c1-2 c1-2s c1-2t c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2u c1-14 c1-2j c1-2v c1-2w c1-2x c1-2y c1-34 c1-2k c1-2m c1-35 c1-2o c1-36 c1-37 c1-38">Nitin
+                                        Gokarn</span>
+                                    </div>
+                                  </a></div>
+                              </div>
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-19 c1-39 c1-1b c1-1e c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                            <div data-ux="Block"
+                              class="x-el x-el-div c1-1 c1-2 c1-18 c1-19 c1-1a c1-1b c1-1c c1-3a c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <div data-ux="Block" id="navBar-22094"
+                                class="x-el x-el-div c1-1 c1-2 c1-18 c1-19 c1-1f c1-b c1-c c1-d c1-e c1-f c1-g"></div>
+                            </div>
+                          </nav>
+                        </div>
+                        <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-19 c1-b c1-c c1-d c1-3b c1-e c1-f c1-g">
+                          <nav data-ux="Block" class="x-el x-el-nav c1-1 c1-2 c1-4 c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <div data-ux="Block"
+                              class="x-el x-el-div c1-1 c1-2 c1-4 c1-19 c1-1a c1-1b c1-1c c1-3a c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-3c c1-3d c1-3e c1-3f c1-3g c1-3h c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-4 c1-1g c1-19 c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <div data-ux="Block" data-aid="HEADER_LOGO_RENDERED"
+                                  class="x-el x-el-div c1-1i c1-1j c1-1k c1-1l c1-4 c1-1m c1-1n c1-1o c1-1p c1-1q c1-1r c1-1s c1-1t c1-1u">
+                                  <a rel="" role="link" aria-haspopup="menu" data-ux="Link"
+                                    data-page="5b1964fc-96a0-4a42-962d-17657b6bcf79" title="Nitin Gokarn" href="/"
+                                    data-typography="LinkAlpha"
+                                    class="x-el x-el-a c1-1v c1-1w c1-1x c1-1y c1-1z c1-20 c1-21 c1-22 c1-23 c1-24 c1-25 c1-z c1-4 c1-b c1-26 c1-c c1-27 c1-28 c1-29 c1-d c1-e c1-f c1-g"
+                                    data-tccl="ux2.HEADER.header9.Logo.Default.Link.Default.22098.click,click">
+                                    <div data-ux="Block" id="logo-container-22099"
+                                      class="x-el x-el-div c1-1 c1-2 c1-1k c1-4 c1-s c1-b c1-c c1-d c1-e c1-f c1-g">
+                                      <h3 role="heading" aria-level="3" data-ux="LogoHeading" id="logo-text-22100"
+                                        data-aid="HEADER_LOGO_TEXT_RENDERED" data-typography="LogoAlpha"
+                                        class="x-el x-el-h3 c1-2a c1-2 c1-1y c1-1z c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2i c1-1k c1-2j c1-2k c1-2l c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r">
+                                        Nitin Gokarn</h3><span role="heading" aria-level="NaN" data-ux="scaler"
+                                        data-size="xxlarge" data-scaler-id="scaler-logo-container-22099"
+                                        aria-hidden="true" data-typography="LogoAlpha"
+                                        class="x-el x-el-span c1-2a c1-2 c1-2s c1-2t c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2u c1-14 c1-2j c1-2v c1-2w c1-2x c1-2y c1-2l c1-2k c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r">Nitin
+                                        Gokarn</span><span role="heading" aria-level="NaN" data-ux="scaler"
+                                        data-size="xlarge" data-scaler-id="scaler-logo-container-22099" aria-hidden="true"
+                                        data-typography="LogoAlpha"
+                                        class="x-el x-el-span c1-2a c1-2 c1-2s c1-2t c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2u c1-14 c1-2j c1-2v c1-2w c1-2x c1-2y c1-2z c1-2k c1-2m c1-30 c1-2o c1-31 c1-32 c1-33">Nitin
+                                        Gokarn</span><span role="heading" aria-level="NaN" data-ux="scaler"
+                                        data-size="large" data-scaler-id="scaler-logo-container-22099" aria-hidden="true"
+                                        data-typography="LogoAlpha"
+                                        class="x-el x-el-span c1-2a c1-2 c1-2s c1-2t c1-2b c1-v c1-w c1-2c c1-2d c1-z c1-1g c1-2e c1-2f c1-2g c1-2h c1-2u c1-14 c1-2j c1-2v c1-2w c1-2x c1-2y c1-34 c1-2k c1-2m c1-35 c1-2o c1-36 c1-37 c1-38">Nitin
+                                        Gokarn</span>
+                                    </div>
+                                  </a></div>
+                              </div>
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-3c c1-3d c1-3e c1-3f c1-3g c1-3h c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-ux="Container"
+                      class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-3d c1-3f c1-2c c1-2d c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                      <div data-ux="Block"
+                        class="x-el x-el-div c1-1 c1-2 c1-s c1-b c1-c c1-3i c1-3j c1-3k c1-d c1-e c1-f c1-g">
+                        <div data-ux="Block"
+                          class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-19 c1-1f c1-1b c1-3l c1-b c1-c c1-3m c1-d c1-e c1-f c1-g">
+                          <figure data-ux="WrapperImage"
+                            class="x-el x-el-figure c1-1 c1-2 c1-s c1-1k c1-2c c1-3n c1-2d c1-3o c1-4 c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <img
+                              src="{% static 'images/image-158.webp' %}"
+                              srcset="{% static 'images/image-158.webp' %}"
+                              data-ux="Image" data-aid="BACKGROUND_IMAGE_RENDERED" data-ht="Inset"
+                              class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-3q c1-3r c1-b c1-c c1-3s c1-1n c1-3t c1-10 c1-3u c1-3v c1-d c1-e c1-f c1-g">
+                          </figure>
+                        </div>
+                        <div data-ux="Hero"
+                          class="x-el x-el-div c1-1 c1-2 c1-1g c1-19 c1-3w c1-3x c1-1f c1-1b c1-x c1-y c1-3y c1-3z c1-40 c1-b c1-c c1-10 c1-41 c1-42 c1-43 c1-44 c1-45 c1-46 c1-d c1-47 c1-48 c1-49 c1-e c1-f c1-g">
+                          <div data-ux="Block"
+                            class="x-el x-el-div c1-1 c1-2 c1-19 c1-3w c1-1f c1-1b c1-4a c1-4 c1-b c1-c c1-4b c1-d c1-e c1-f c1-g">
+                            <div data-ux="Block"
+                              class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-4c c1-4 c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <h2 role="heading" aria-level="2" data-ux="SupTagline" data-typography="HeadingBeta"
+                                class="x-el x-el-h2 c1-4d c1-1j c1-1y c1-1z c1-4e c1-v c1-w c1-2c c1-4f c1-4 c1-4g c1-s c1-b c1-c c1-26 c1-2m c1-d c1-e c1-f c1-g">
+                                Welcome</h2>
+                              <div data-ux="Container"
+                                class="x-el x-el-div c1-1 c1-2 c1-3o c1-3n c1-3g c1-3e c1-z c1-4h c1-3d c1-3f c1-2c c1-2d c1-3h c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                                <div id="tagline-container-22101" defaultfontsize="xxlarge"
+                                  class="x-el x-el-div c1-1 c1-2 c1-1y c1-1z c1-4i c1-s c1-z c1-2u c1-4j c1-b c1-c c1-d c1-e c1-f c1-g">
+                                  <h1 role="heading" aria-level="1" data-ux="Tagline" maxlines="4"
+                                    data-aid="HEADER_TAGLINE_RENDERED" id="dynamic-tagline-22102"
+                                    containerid="tagline-container-22101" data-typography="HeadingAlpha"
+                                    class="x-el x-el-h1 c1-1i c1-1j c1-1y c1-1z c1-4j c1-v c1-w c1-2c c1-4f c1-4k c1-4l c1-z c1-s c1-1k c1-1l c1-2k c1-2m c1-4m c1-4n c1-4o c1-4p">
+                                    World of Words and Wisdom</h1><span role="heading" aria-level="NaN" data-ux="scaler"
+                                    data-size="xxlarge" data-scaler-id="scaler-tagline-container-22101" aria-hidden="true"
+                                    data-typography="HeadingAlpha"
+                                    class="x-el x-el-span c1-1i c1-1j c1-2s c1-2t c1-4j c1-v c1-w c1-2c c1-4f c1-4k c1-z c1-14 c1-2w c1-2v c1-2u c1-2x c1-2y c1-4l c1-1l c1-2k c1-2m c1-4m c1-4n c1-4o c1-4p">World
+                                    of Words and Wisdom</span><span role="heading" aria-level="NaN" data-ux="scaler"
+                                    data-size="xlarge" data-scaler-id="scaler-tagline-container-22101" aria-hidden="true"
+                                    data-typography="HeadingAlpha"
+                                    class="x-el x-el-span c1-1i c1-1j c1-2s c1-2t c1-4j c1-v c1-w c1-2c c1-4f c1-4k c1-z c1-14 c1-2w c1-2v c1-2u c1-2x c1-2y c1-4q c1-1l c1-2k c1-2m c1-35 c1-36 c1-4r c1-4s">World
+                                    of Words and Wisdom</span><span role="heading" aria-level="NaN" data-ux="scaler"
+                                    data-size="large" data-scaler-id="scaler-tagline-container-22101" aria-hidden="true"
+                                    data-typography="HeadingAlpha"
+                                    class="x-el x-el-span c1-1i c1-1j c1-2s c1-2t c1-4j c1-v c1-w c1-2c c1-4f c1-4k c1-z c1-14 c1-2w c1-2v c1-2u c1-2x c1-2y c1-4t c1-1l c1-2k c1-2m c1-4u c1-4v c1-4w c1-4x">World
+                                    of Words and Wisdom</span>
+                                </div>
+                              </div>
+                              <div data-ux="HeroText" data-aid="HEADER_TAGLINE2_RENDERED" data-typography="BodyAlpha"
+                                class="x-el c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-4f c1-4z c1-50 c1-51 c1-52 c1-1k c1-4 c1-4c c1-v c1-w c1-b c1-53 c1-c c1-2m c1-d c1-e c1-f c1-g x-rt">
+                                <p style="margin:0"><span>Explore new ideas and express yourself through words and
+                                    thoughts.</span></p>
+                              </div>
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-4 c1-19 c1-5b c1-5c c1-5d c1-1f c1-5e c1-b c1-c c1-5f c1-d c1-e c1-f c1-g">
+                                <div style="max-width:100%"><a data-ux-btn="primary" data-ux="ButtonPrimary"
+                                    data-aid="HEADER_CTA_BTN" href="/" target=""
+                                    data-tccl="ux2.header.cta_button.click,click"
+                                    data-page="5b1964fc-96a0-4a42-962d-17657b6bcf79" data-typography="ButtonAlpha"
+                                    class="x-el x-el-a c1-5g c1-1j c1-5h c1-2u c1-21 c1-5i c1-5j c1-1b c1-1f c1-1g c1-1x c1-1z c1-1y c1-s c1-z c1-5k c1-5l c1-2e c1-2f c1-5m c1-5n c1-5o c1-5p c1-b c1-56 c1-5q c1-1m c1-5r c1-5s c1-5t c1-1r c1-1s c1-1t c1-1u">Explore</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="c8b3fc4a-851e-4a1c-8d2a-4f2220d5d83e" class="widget widget-about widget-about-about-10">
+            <div data-ux="Widget" role="region" id="c8b3fc4a-851e-4a1c-8d2a-4f2220d5d83e"
+              class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div>
+                <section data-ux="Section"
+                  class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-b c1-c c1-q c1-r c1-d c1-e c1-f c1-g">
+                  <div data-ux="Container"
+                    class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                    <h2 role="heading" aria-level="2" data-ux="SectionHeading" data-aid="ABOUT_SECTION_TITLE_RENDERED"
+                      data-typography="HeadingEpsilon" data-font-scaled="true"
+                      class="x-el x-el-h2 c1-1i c1-1j c1-1y c1-1z c1-5u c1-3o c1-3n c1-2c c1-t c1-5v c1-1l c1-5w c1-4q c1-2m c1-5x c1-35 c1-36 c1-4r c1-4s">
+                      <span data-ux="Element" class="">About Nitin Gokarn</span></h2>
+                    <div data-ux="ContentCards"
+                      class="x-el x-el-div x-el c1-1 c1-2 c1-1g c1-1f c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-19 c1-62 c1-63 c1-5b c1-2c c1-64 c1-65 c1-66 c1-b c1-c c1-67 c1-68 c1-69 c1-6a c1-d c1-e c1-f c1-g">
+                      <div data-ux="GridCell"
+                        class="x-el x-el-div c1-1 c1-2 c1-62 c1-3x c1-6b c1-6c c1-z c1-3d c1-6d c1-3a c1-6e c1-19 c1-b c1-c c1-6f c1-6g c1-6h c1-6i c1-6j c1-6k c1-d c1-6l c1-6m c1-e c1-f c1-g">
+                        <div data-ux="ContentCard" index="0"
+                          class="x-el x-el-div x-el c1-1 c1-2 c1-s c1-19 c1-3w c1-1b c1-1g c1-1d c1-4 c1-6n c1-6o c1-6p c1-3x c1-40 c1-17 c1-3d c1-b c1-c c1-6q c1-6r c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                          <div data-ux="ContentCardWrapperImage"
+                            class="x-el x-el-div c1-1 c1-2 c1-1k c1-v c1-w c1-1g c1-4 c1-6s c1-6t c1-6u c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <span data-ux="Element" class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <a>
+                                <img
+                                src="{% static 'images/background.webp' %}"
+                                srcset="{% static 'images/background.webp' %}"
+                                data-ux="ContentCardImageThumbnail" data-aid="ABOUT_IMAGE_RENDERED0"
+                                class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-3q c1-3r c1-6v c1-6w c1-b c1-c c1-3s c1-d c1-6x c1-e c1-6y c1-f c1-g">
+                                </span>
+                              </a>
+                          </div>
+                          <div data-ux="Block"
+                            class="x-el x-el-div c1-1 c1-2 c1-4 c1-s c1-6z c1-b c1-c c1-70 c1-d c1-15 c1-e c1-f c1-g">
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading"
+                              data-aid="ABOUT_HEADLINE_RENDERED0" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-2d c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-75 c1-76 c1-77 c1-78 c1-79">
+                              Background</h4>
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-2v c1-2w c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-76 c1-7a c1-77 c1-78 c1-79">
+                              Our Community</h4>
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-2v c1-2w c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-7b c1-76 c1-77 c1-78 c1-79">
+                              Background</h4>
+                          </div>
+                          <div data-ux="ContentCardText" data-aid="ABOUT_DESCRIPTION_RENDERED0"
+                            data-typography="BodyAlpha"
+                            class="x-el c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-2d c1-7c c1-7d c1-7e c1-7f c1-7g c1-7h c1-7i c1-7j c1-7k c1-7l c1-7m c1-7n c1-7o c1-7p c1-7q c1-7r c1-7s c1-7t c1-7u c1-7v c1-7w c1-7x c1-7y c1-7z c1-80 c1-81 c1-82 c1-83 c1-4 c1-3x c1-5k c1-5l c1-b c1-84 c1-c c1-2m c1-85 c1-86 c1-87 c1-d c1-e c1-f c1-g x-rt">
+                            <p style="margin:0"><span>I am a web developer with experience in both front-end and back-end
+                                development. I have a strong passion for coding and enjoy creating websites and
+                                applications that are both visually appealing and functional.</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      {% comment %} book section {% endcomment %}
+                      <div data-ux="GridCell"
+                        class="x-el x-el-div c1-1 c1-2 c1-62 c1-3x c1-6b c1-6c c1-z c1-3d c1-6d c1-3a c1-6e c1-19 c1-b c1-c c1-6f c1-6g c1-6h c1-6i c1-6j c1-6k c1-d c1-6l c1-6m c1-e c1-f c1-g">
+                          <div data-ux="ContentCard" index="1"
+                          class="x-el x-el-div x-el c1-1 c1-2 c1-s c1-19 c1-3w c1-1b c1-1g c1-1d c1-4 c1-6n c1-6o c1-6p c1-3x c1-40 c1-17 c1-3d c1-b c1-c c1-6q c1-6r c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                          <div data-ux="ContentCardWrapperImage"
+                            class="x-el x-el-div c1-1 c1-2 c1-1k c1-v c1-w c1-1g c1-4 c1-6s c1-6t c1-6u c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <span data-ux="Element" class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <a href="{% url "product_list" %}">
+                              <img
+                                src="{% static 'images/my_book.webp' %}"
+                                srcset="{% static 'images/my_book.webp' %}"
+                                data-ux="ContentCardImageThumbnail" data-aid="ABOUT_IMAGE_RENDERED0"
+                                class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-3q c1-3r c1-6v c1-6w c1-b c1-c c1-3s c1-d c1-6x c1-e c1-6y c1-f c1-g"></a>
+                          </div>
+                          <div data-ux="Block"
+                            class="x-el x-el-div c1-1 c1-2 c1-4 c1-s c1-6z c1-b c1-c c1-70 c1-d c1-15 c1-e c1-f c1-g">
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading"
+                              data-aid="ABOUT_HEADLINE_RENDERED1" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-2d c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-75 c1-76 c1-77 c1-78 c1-79">
+                              My Books</h4>
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-2v c1-2w c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-76 c1-7a c1-77 c1-78 c1-79">
+                              Our Community</h4>
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-2v c1-2w c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-7b c1-76 c1-77 c1-78 c1-79">
+                              Background</h4>
+                          </div>
+                          <div data-ux="ContentCardText" data-aid="ABOUT_DESCRIPTION_RENDERED1"
+                            data-typography="BodyAlpha"
+                            class="x-el c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-2d c1-7c c1-7d c1-7e c1-7f c1-7g c1-7h c1-7i c1-7j c1-7k c1-7l c1-7m c1-7n c1-7o c1-7p c1-7q c1-7r c1-7s c1-7t c1-7u c1-7v c1-7w c1-7x c1-7y c1-7z c1-80 c1-81 c1-82 c1-83 c1-4 c1-3x c1-5k c1-5l c1-b c1-84 c1-c c1-2m c1-85 c1-86 c1-87 c1-d c1-e c1-f c1-g x-rt">
+                            <p style="margin:0"><span>�&nbsp;We take pride in our diverse and extensive collection of
+                                books that cater to all ages and interests. From classic literature to contemporary
+                                bestsellers, we have something for everyone. We also stock a range of stationery and gift
+                                items.�&nbsp;</span></p>
+                          </div>
+                         </div>
+                      </div>
+
+                      <div data-ux="GridCell"
+                        class="x-el x-el-div c1-1 c1-2 c1-62 c1-3x c1-6b c1-6c c1-z c1-3d c1-6d c1-3a c1-6e c1-19 c1-b c1-c c1-6f c1-6g c1-6h c1-6i c1-6j c1-6k c1-d c1-6l c1-6m c1-e c1-f c1-g">
+                        <div data-ux="ContentCard" index="2"
+                          class="x-el x-el-div x-el c1-1 c1-2 c1-s c1-19 c1-3w c1-1b c1-1g c1-1d c1-4 c1-6n c1-6o c1-6p c1-3x c1-40 c1-17 c1-3d c1-b c1-c c1-6q c1-6r c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                          <div data-ux="ContentCardWrapperImage"
+                            class="x-el x-el-div c1-1 c1-2 c1-1k c1-v c1-w c1-1g c1-4 c1-6s c1-6t c1-6u c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <span data-ux="Element" class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><img
+                                src="//img1.wsimg.com/isteam/stock/107964/:/rs=w:365,h:365,cg:true,m/cr=w:365,h:365"
+                                srcset="//img1.wsimg.com/isteam/stock/107964/:/rs=w:365,h:365,cg:true,m/cr=w:365,h:365, //img1.wsimg.com/isteam/stock/107964/:/rs=w:730,h:730,cg:true,m/cr=w:730,h:730 2x, //img1.wsimg.com/isteam/stock/107964/:/rs=w:1095,h:1095,cg:true,m/cr=w:1095,h:1095 3x"
+                                data-ux="ContentCardImageThumbnail" data-aid="ABOUT_IMAGE_RENDERED2"
+                                class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-3q c1-3r c1-6v c1-6w c1-b c1-c c1-3s c1-d c1-6x c1-e c1-6y c1-f c1-g"></span>
+                          </div>
+                          <div data-ux="Block"
+                            class="x-el x-el-div c1-1 c1-2 c1-4 c1-s c1-6z c1-b c1-c c1-70 c1-d c1-15 c1-e c1-f c1-g">
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading"
+                              data-aid="ABOUT_HEADLINE_RENDERED2" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-2d c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-75 c1-76 c1-77 c1-78 c1-79">
+                              Our Community</h4>
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-2v c1-2w c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-76 c1-7a c1-77 c1-78 c1-79">
+                              Our Community</h4>
+                            <h4 role="heading" aria-level="4" data-ux="ContentCardHeading" data-typography="HeadingDelta"
+                              class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-2v c1-2w c1-4h c1-72 c1-5k c1-5l c1-b c1-73 c1-74 c1-2m c1-7b c1-76 c1-77 c1-78 c1-79">
+                              Our Community</h4>
+                          </div>
+                          <div data-ux="ContentCardText" data-aid="ABOUT_DESCRIPTION_RENDERED2"
+                            data-typography="BodyAlpha"
+                            class="x-el c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-2d c1-7c c1-7d c1-7e c1-7f c1-7g c1-7h c1-7i c1-7j c1-7k c1-7l c1-7m c1-7n c1-7o c1-7p c1-7q c1-7r c1-7s c1-7t c1-7u c1-7v c1-7w c1-7x c1-7y c1-7z c1-80 c1-81 c1-82 c1-83 c1-4 c1-3x c1-5k c1-5l c1-b c1-84 c1-c c1-2m c1-85 c1-86 c1-87 c1-d c1-e c1-f c1-g x-rt">
+                            <p style="margin:0"><span>I believe that books have the power to connect people and build
+                                communities. That's why we regularly host book clubs, author events, and other literary
+                                activities that bring book lovers together. We also support local schools and
+                                libraries.�&nbsp;</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="fb7fb98d-adbd-4342-b65b-f1b77f505ece" class="widget widget-gallery widget-gallery-gallery-4">
+            <div data-ux="Widget" role="region" id="fb7fb98d-adbd-4342-b65b-f1b77f505ece"
+              class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div>
+                <section data-ux="Section"
+                  class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-88 c1-b c1-c c1-q c1-r c1-d c1-e c1-f c1-g">
+                  <div data-ux="Container"
+                    class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                    <h2 role="heading" aria-level="2" data-ux="SectionHeading" data-aid="GALLERY_SECTION_TITLE_RENDERED"
+                      data-typography="HeadingEpsilon" data-font-scaled="true"
+                      class="x-el x-el-h2 c1-1i c1-1j c1-1y c1-1z c1-5u c1-3o c1-3n c1-2c c1-t c1-5v c1-1l c1-89 c1-4t c1-2m c1-5x c1-4u c1-4v c1-4w c1-4x">
+                      <span data-ux="Element" class="">Snapshot Memories: A Glimpse into My Life Through
+                        Photography</span></h2>
+                    <div data-ux="Element" id="bs-1" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                      <div>
+                        <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-8a c1-8b c1-b c1-c c1-d c1-e c1-f c1-g">
+                          <div data-ux="Block" id="gallery4-22112"
+                            class="x-el x-el-div c1-1 c1-2 c1-8c c1-2c c1-3n c1-2d c1-3o c1-3h c1-b c1-c c1-d c1-e c1-f c1-g">
+                            {% if medias %}
+                            {% for media in medias %}
+                            <div data-ux="Block" data-aid="GALLERY_IMAGE0_CELL_RENDERED"
+                              class="x-el x-el-div c1-1 c1-2 c1-8d c1-1k c1-8e c1-8f c1-8g c1-8h c1-b c1-c c1-d c1-8i c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-21 c1-6w c1-4 c1-8j c1-8k c1-4i c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <img data-lazyimg="true"
+                                  data-srclazy="//img1.wsimg.com/isteam/stock/6QJad5e/:/rs=w:370,cg:true,m"
+                                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                  data-srcsetlazy="//img1.wsimg.com/isteam/stock/6QJad5e/:/rs=w:370,cg:true,m, //img1.wsimg.com/isteam/stock/6QJad5e/:/rs=w:740,cg:true,m 2x, //img1.wsimg.com/isteam/stock/6QJad5e/:/rs=w:1110,cg:true,m 3x"
+                                  data-ux="Image" data-aid="GALLERY_IMAGE0_RENDERED"
+                                  class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-3q c1-21 c1-6w c1-8j c1-8k c1-4i c1-3r c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                            {% endfor %}
+                            <div data-ux="Block" data-aid="GALLERY_IMAGE1_CELL_RENDERED"
+                              class="x-el x-el-div c1-1 c1-2 c1-8d c1-1k c1-8e c1-8f c1-8g c1-8h c1-b c1-c c1-d c1-8i c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-21 c1-6w c1-4 c1-8j c1-8k c1-4i c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <img data-lazyimg="true"
+                                  data-srclazy="//img1.wsimg.com/isteam/stock/upmAxdd9ppFmZ3Aro/:/rs=w:370,cg:true,m"
+                                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                  data-srcsetlazy="//img1.wsimg.com/isteam/stock/upmAxdd9ppFmZ3Aro/:/rs=w:370,cg:true,m, //img1.wsimg.com/isteam/stock/upmAxdd9ppFmZ3Aro/:/rs=w:740,cg:true,m 2x, //img1.wsimg.com/isteam/stock/upmAxdd9ppFmZ3Aro/:/rs=w:1110,cg:true,m 3x"
+                                  data-ux="Image" data-aid="GALLERY_IMAGE1_RENDERED"
+                                  class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-8l c1-21 c1-6w c1-8j c1-8k c1-4i c1-3r c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                            <div data-ux="Block" data-aid="GALLERY_IMAGE2_CELL_RENDERED"
+                              class="x-el x-el-div c1-1 c1-2 c1-8d c1-1k c1-8e c1-8f c1-8g c1-8h c1-b c1-c c1-d c1-8i c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-21 c1-6w c1-4 c1-8j c1-8k c1-4i c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <img data-lazyimg="true"
+                                  data-srclazy="//img1.wsimg.com/isteam/stock/xrWr47W/:/rs=w:370,cg:true,m"
+                                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                  data-srcsetlazy="//img1.wsimg.com/isteam/stock/xrWr47W/:/rs=w:370,cg:true,m, //img1.wsimg.com/isteam/stock/xrWr47W/:/rs=w:740,cg:true,m 2x, //img1.wsimg.com/isteam/stock/xrWr47W/:/rs=w:1110,cg:true,m 3x"
+                                  data-ux="Image" data-aid="GALLERY_IMAGE2_RENDERED"
+                                  class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-8m c1-21 c1-6w c1-8j c1-8k c1-4i c1-3r c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                            <div data-ux="Block" data-aid="GALLERY_IMAGE3_CELL_RENDERED"
+                              class="x-el x-el-div c1-1 c1-2 c1-8d c1-1k c1-8e c1-8f c1-8g c1-8h c1-b c1-c c1-d c1-8i c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-21 c1-6w c1-4 c1-8j c1-8k c1-4i c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <img data-lazyimg="true"
+                                  data-srclazy="//img1.wsimg.com/isteam/stock/u0pQ50kl7DtzbpK93/:/rs=w:370,cg:true,m"
+                                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                  data-srcsetlazy="//img1.wsimg.com/isteam/stock/u0pQ50kl7DtzbpK93/:/rs=w:370,cg:true,m, //img1.wsimg.com/isteam/stock/u0pQ50kl7DtzbpK93/:/rs=w:740,cg:true,m 2x, //img1.wsimg.com/isteam/stock/u0pQ50kl7DtzbpK93/:/rs=w:1110,cg:true,m 3x"
+                                  data-ux="Image" data-aid="GALLERY_IMAGE3_RENDERED"
+                                  class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-8m c1-21 c1-6w c1-8j c1-8k c1-4i c1-3r c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                            <div data-ux="Block" data-aid="GALLERY_IMAGE4_CELL_RENDERED"
+                              class="x-el x-el-div c1-1 c1-2 c1-8d c1-1k c1-8e c1-8f c1-8g c1-8h c1-b c1-c c1-d c1-8i c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-21 c1-6w c1-4 c1-8j c1-8k c1-4i c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <img data-lazyimg="true"
+                                  data-srclazy="//img1.wsimg.com/isteam/stock/y6lZ9mB/:/rs=w:370,cg:true,m"
+                                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                  data-srcsetlazy="//img1.wsimg.com/isteam/stock/y6lZ9mB/:/rs=w:370,cg:true,m, //img1.wsimg.com/isteam/stock/y6lZ9mB/:/rs=w:740,cg:true,m 2x, //img1.wsimg.com/isteam/stock/y6lZ9mB/:/rs=w:1110,cg:true,m 3x"
+                                  data-ux="Image" data-aid="GALLERY_IMAGE4_RENDERED"
+                                  class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-8n c1-21 c1-6w c1-8j c1-8k c1-4i c1-3r c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                            <div data-ux="Block" data-aid="GALLERY_IMAGE5_CELL_RENDERED"
+                              class="x-el x-el-div c1-1 c1-2 c1-8d c1-1k c1-8e c1-8f c1-8g c1-8h c1-b c1-c c1-d c1-8i c1-e c1-f c1-g">
+                              <div data-ux="Block"
+                                class="x-el x-el-div c1-1 c1-2 c1-21 c1-6w c1-4 c1-8j c1-8k c1-4i c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <img data-lazyimg="true"
+                                  data-srclazy="//img1.wsimg.com/isteam/stock/u6yJZ2V5RKf8kGJbE/:/rs=w:370,cg:true,m"
+                                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                  data-srcsetlazy="//img1.wsimg.com/isteam/stock/u6yJZ2V5RKf8kGJbE/:/rs=w:370,cg:true,m, //img1.wsimg.com/isteam/stock/u6yJZ2V5RKf8kGJbE/:/rs=w:740,cg:true,m 2x, //img1.wsimg.com/isteam/stock/u6yJZ2V5RKf8kGJbE/:/rs=w:1110,cg:true,m 3x"
+                                  data-ux="Image" data-aid="GALLERY_IMAGE5_RENDERED"
+                                  class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-8m c1-21 c1-6w c1-8j c1-8k c1-4i c1-3r c1-b c1-c c1-d c1-e c1-f c1-g">
+                              </div>
+                            </div>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="ec2e3ec4-c833-4da8-a573-9c5dbb2c1142"
+            class="widget widget-introduction widget-introduction-introduction-1">
+            <div data-ux="Widget" role="region" id="ec2e3ec4-c833-4da8-a573-9c5dbb2c1142"
+              class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-3l c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div>
+                <section data-ux="Section"
+                  class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-j c1-8o c1-b c1-c c1-q c1-r c1-d c1-e c1-f c1-g">
+                  <div data-ux="SplitLayout" data-aid="SPLIT_LAYOUT_RENDERED"
+                    class="x-el x-el-div x-el c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-d c1-e c1-f c1-g">
+                    <div data-ux="Grid"
+                      class="x-el x-el-div c1-1 c1-2 c1-19 c1-62 c1-63 c1-5b c1-2c c1-64 c1-65 c1-66 c1-b c1-c c1-67 c1-68 c1-69 c1-6a c1-d c1-e c1-f c1-g">
+                      <div data-ux="GridCell"
+                        class="x-el x-el-div c1-1 c1-2 c1-62 c1-3x c1-6b c1-6c c1-z c1-3d c1-6d c1-3a c1-6e c1-18 c1-b c1-c c1-6h c1-6i c1-6j c1-6k c1-d c1-8p c1-8q c1-8r c1-e c1-f c1-g">
+                        <div data-ux="Block"
+                          class="x-el x-el-div c1-1 c1-2 c1-8s c1-8t c1-s c1-b c1-c c1-d c1-8u c1-8v c1-e c1-f c1-g">
+                          <picture data-lazyimg="true"
+                            class="x-el x-el-picture c1-1 c1-2 c1-4 c1-4a c1-1g c1-8w c1-3h c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <source media="(max-width: 450px)" data-lazyimg="true"
+                              data-srcsetlazy="//img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:403, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:806 2x, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:1209 3x">
+                            <source media="(min-width: 451px) and (max-width: 767px)" data-lazyimg="true"
+                              data-srcsetlazy="//img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:719, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:1438 2x, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:2157 3x">
+                            <source media="(min-width: 768px) and (max-width: 1023px)" data-lazyimg="true"
+                              data-srcsetlazy="//img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:1023, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:2046 2x, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:3069 3x">
+                            <source media="(min-width: 1024px) and (max-width: 1279px)" data-lazyimg="true"
+                              data-srcsetlazy="//img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:984, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:1968 2x, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:2952 3x">
+                            <source media="(min-width: 1280px) and (max-width: 1535px)" data-lazyimg="true"
+                              data-srcsetlazy="//img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:1160, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:2320 2x, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:3480 3x">
+                            <source media="(min-width: 1536px)" data-lazyimg="true"
+                              data-srcsetlazy="//img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:1280, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:2560 2x, //img1.wsimg.com/isteam/stock/opk1p3B/:/rs=w:3840 3x">
+                            <img data-ux="Image" data-lazyimg="true"
+                              data-srclazy="//img1.wsimg.com/isteam/stock/opk1p3B/:/"
+                              src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-aid="IMAGE_RENDERED"
+                              class="x-el x-el-img c1-1 c1-2 c1-4 c1-z c1-v c1-w c1-2c c1-2d c1-3p c1-8x c1-4a c1-6v c1-3r c1-b c1-c c1-d c1-e c1-f c1-g">
+                          </picture>
+                        </div>
+                      </div>
+                      <div data-ux="GridCell"
+                        class="x-el x-el-div c1-1 c1-2 c1-62 c1-3x c1-6b c1-6c c1-z c1-3d c1-6d c1-3a c1-6e c1-b c1-c c1-6h c1-6i c1-6j c1-6k c1-d c1-8p c1-8q c1-e c1-f c1-g">
+                        <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-4 c1-4a c1-b c1-c c1-d c1-e c1-f c1-g">
+                          <div data-ux="VerticalBox"
+                            class="x-el x-el-div x-el c1-1 c1-2 c1-4a c1-2u c1-19 c1-39 c1-8y c1-3w c1-5v c1-1c c1-3a c1-b c1-c c1-8z c1-d c1-90 c1-91 c1-92 c1-93 c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                            <div data-ux="Group" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <h6 data-ux="Details" data-aid="SECONDARY_TITLE_RENDERED" data-typography="DetailsAlpha"
+                                data-font-scaled="true"
+                                class="x-el x-el-h6 c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-4f c1-5v c1-b c1-94 c1-74 c1-2m c1-76 c1-77 c1-78 c1-79">
+                                Hello</h6>
+                              <h2 role="heading" aria-level="2" data-ux="HeadingMajor" data-aid="SECTION_TITLE_RENDERED"
+                                data-typography="HeadingGamma"
+                                class="x-el x-el-h2 c1-1i c1-1j c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-2d c1-5v c1-3d c1-3e c1-3f c1-3g c1-1l c1-73 c1-4q c1-2m c1-3h c1-35 c1-95 c1-96 c1-97 c1-98 c1-99 c1-9a c1-9b c1-9c c1-9d c1-36 c1-4r c1-4s">
+                                Discover Nitin Gokarn's Video Presence</h2>
+                              <div data-ux="HorizontalBox"
+                                class="x-el x-el-div x-el c1-1 c1-2 c1-6w c1-4 c1-19 c1-1d c1-8y c1-9e c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <div data-ux="Text" data-aid="DESCRIPTION_TEXT" data-typography="BodyBeta"
+                                  class="x-el c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-2d c1-z c1-b c1-84 c1-74 c1-2m c1-76 c1-77 c1-78 c1-79 x-rt">
+                                  <p style="margin:0"><span>Get to know me through my videos. Let's build something great
+                                      together!</span></p>
+                                </div>
+                              </div>
+                              <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-9f c1-b c1-c c1-d c1-e c1-f c1-g"><a
+                                  data-ux-btn="secondary" data-ux="ButtonSecondary" data-aid="CTA_BUTTON_RENDERED"
+                                  href="/" target=""
+                                  data-tccl="ux2.INTRODUCTION.introduction1.Group.Default.Button.Secondary.22114.click,click"
+                                  data-page="5b1964fc-96a0-4a42-962d-17657b6bcf79" data-typography="ButtonAlpha"
+                                  class="x-el x-el-a c1-5g c1-1j c1-5h c1-21 c1-5i c1-5j c1-1b c1-1f c1-1g c1-1x c1-1z c1-1y c1-s c1-z c1-4 c1-5k c1-5l c1-2e c1-2f c1-5m c1-5n c1-9g c1-9h c1-b c1-56 c1-5q c1-1m c1-9i c1-5s c1-5t c1-1r c1-1s c1-1t c1-1u">Find
+                                  out more</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="d6dc9420-a365-4f82-aa7d-0859a554f71a" class="widget widget-reviews widget-reviews-reviews-1">
+            <div data-ux="WidgetBanner" role="region" id="d6dc9420-a365-4f82-aa7d-0859a554f71a"
+              class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div>
+                <div role="img" data-aid="SECTION_BACKGROUND" data-ux="Background"
+                  class="x-el x-el-div c1-1 c1-2 c1-9j c1-9k c1-b c1-c c1-d c1-e c1-f c1-g">
+                  <div data-ux="Block" data-lazybg="true"
+                    class="x-el x-el-div d-none c1-1 c1-2 c1-9l c1-9m c1-9n c1-9o c1-5q c1-b c1-c c1-9p c1-9q c1-9r c1-9s c1-9t c1-9u c1-9v c1-9w c1-9x c1-9y c1-9z c1-a0 c1-a1 c1-a2 c1-a3 c1-a4 c1-a5 c1-a6 c1-a7 c1-a8 c1-a9 c1-d c1-e c1-f c1-g">
+                  </div>
+                  <section data-ux="SectionBanner"
+                    class="x-el x-el-section c1-1 c1-2 c1-aa c1-h c1-i c1-b c1-c c1-q c1-r c1-d c1-ab c1-ac c1-e c1-f c1-g">
+                    <div data-ux="Container"
+                      class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-3g c1-3e c1-z c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                      <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-ad c1-b c1-c c1-d c1-9a c1-e c1-f c1-g">
+                        <h2 role="heading" aria-level="2" data-ux="SectionBannerHeading"
+                          data-aid="REVIEWS_SECTION_TITLE_RENDERED" data-typography="HeadingGamma" data-font-scaled="true"
+                          class="x-el x-el-h2 c1-1i c1-1j c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-ae c1-1g c1-1l c1-af c1-4l c1-2m c1-4m c1-4n c1-4o c1-4p">
+                          Blogs</h2>
+                        <div data-ux="Element" id="bs-2" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                          <div data-ux="Container"
+                            class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-19 c1-3w c1-ag c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                            <div data-ux="Container"
+                              class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-19 c1-3w c1-ag c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                              <div data-ux="Loader" data-aid="REVIEWS_LOADER"
+                                class="x-el x-el-div c1-1 c1-2 c1-ah c1-2c c1-w c1-2d c1-v c1-b c1-c c1-d c1-e c1-f c1-g">
+                                <svg data-ux="SVG" viewBox="0 0 44 44" width="3em" height="3em" fill="currentColor"
+                                  fill-rule="evenodd" class="x-el x-el-svg c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                                  <circle cx="22" cy="22" r="11"></circle>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="dccb8b15-b747-41d4-a27d-1056f41e842e" class="widget widget-contact widget-contact-contact-1">
+            <div data-ux="Widget" role="region" id="dccb8b15-b747-41d4-a27d-1056f41e842e"
+              class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div>
+                <section data-ux="Section"
+                  class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-ai c1-b c1-c c1-q c1-r c1-d c1-e c1-f c1-g">
+                  <div data-ux="Container"
+                    class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                    <div data-ux="Grid"
+                      class="x-el x-el-div c1-1 c1-2 c1-19 c1-62 c1-63 c1-5b c1-2c c1-64 c1-2d c1-66 c1-b c1-c c1-67 c1-68 c1-aj c1-6a c1-d c1-e c1-f c1-g">
+                      <div data-ux="GridCell"
+                        class="x-el x-el-div c1-1 c1-2 c1-62 c1-3x c1-6b c1-ak c1-z c1-3d c1-6d c1-3f c1-6e c1-b c1-c c1-6h c1-6i c1-al c1-6k c1-d c1-e c1-f c1-g">
+                        <h2 role="heading" aria-level="2" data-ux="SectionHeading" data-aid="CONTACT_SECTION_TITLE_REND"
+                          data-typography="HeadingBeta"
+                          class="x-el x-el-h2 c1-4d c1-1j c1-1y c1-1z c1-5u c1-3o c1-3n c1-2c c1-t c1-5v c1-b c1-c c1-89 c1-2m c1-5x c1-d c1-e c1-f c1-g">
+                          <span data-ux="Element" class="">Contact Me</span></h2>
+                      </div>
+                    </div>
+                    <div data-ux="Content" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                      <div data-ux="Grid"
+                        class="x-el x-el-div c1-1 c1-2 c1-19 c1-62 c1-63 c1-5b c1-2c c1-64 c1-2d c1-66 c1-b c1-c c1-67 c1-68 c1-aj c1-6a c1-d c1-e c1-f c1-g">
+                        <div data-ux="GridCell"
+                          class="x-el x-el-div c1-1 c1-2 c1-62 c1-3x c1-6b c1-ak c1-z c1-3d c1-6d c1-3f c1-6e c1-b c1-c c1-am c1-an c1-ao c1-6h c1-6i c1-al c1-6k c1-d c1-ap c1-aq c1-ar c1-e c1-f c1-g">
+                          <div data-ux="Block" data-aid="CONTACT_INFO_CONTAINER_REND"
+                            class="x-el x-el-div c1-1 c1-2 c1-1g c1-2c c1-b c1-c c1-as c1-67 c1-d c1-e c1-f c1-g">
+                            <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-at c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <h4 role="heading" aria-level="4" data-ux="ContentHeading"
+                                data-aid="CONTACT_INTRO_HEADING_REND" data-typography="HeadingDelta"
+                                class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-b c1-73 c1-74 c1-2m c1-76 c1-77 c1-78 c1-79">
+                                Questions or Comments</h4>
+                              <div data-ux="ContentText" data-aid="CONTACT_INTRO_DESC_REND" data-typography="BodyAlpha"
+                                class="x-el c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-t c1-7c c1-7d c1-7e c1-7f c1-7g c1-7h c1-7i c1-7j c1-7k c1-7l c1-7m c1-7n c1-7o c1-7p c1-7q c1-7r c1-7s c1-7t c1-7u c1-7v c1-7w c1-7x c1-7y c1-7z c1-80 c1-81 c1-82 c1-83 c1-b c1-84 c1-c c1-2m c1-85 c1-86 c1-87 c1-d c1-e c1-f c1-g x-rt">
+                                <p style="margin:0"><span>Send me a message or ask me a question using this form. I will
+                                    do my best to get back to you soon!</span></p>
+                              </div>
+                            </div>
+                            <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                              <h4 role="heading" aria-level="4" data-ux="ContentHeading"
+                                data-aid="CONTACT_INFO_BIZ_NAME_REND" data-typography="HeadingDelta"
+                                class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-t c1-b c1-73 c1-74 c1-2m c1-76 c1-77 c1-78 c1-79">
+                                Nitin Gokarn</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="769b5b1e-e1f7-471c-a6b8-6dd33a03c65f" class="widget widget-social widget-social-social-1"></div>
+          <div id="3d53eff0-fb35-41f3-a0d9-9acbc2525dfe" class="widget widget-footer widget-footer-footer-2">
+            <div data-ux="Widget" role="contentinfo" id="3d53eff0-fb35-41f3-a0d9-9acbc2525dfe"
+              class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div>
+                <section data-ux="Section"
+                  class="x-el x-el-section c1-1 c1-2 c1-3 c1-3y c1-3z c1-b c1-c c1-q c1-r c1-d c1-e c1-f c1-g">
+                  <div data-ux="Divider"
+                    class="x-el x-el-div c1-1 c1-2 c1-3 c1-1c c1-3a c1-14 c1-b c1-c c1-d c1-e c1-f c1-g">
+                    <div data-ux="Container"
+                      class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                      <hr aria-hidden="true" role="separator" data-ux="DividerHR"
+                        class="x-el x-el-hr c1-1 c1-2 c1-au c1-ai c1-av c1-2c c1-2d c1-4 c1-b c1-c c1-d c1-e c1-f c1-g">
+                    </div>
+                  </div>
+                  <div data-ux="Container"
+                    class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-10 c1-d c1-11 c1-e c1-12 c1-f c1-13 c1-g">
+                    <div data-ux="Layout" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+                      <div data-ux="Grid"
+                        class="x-el x-el-div c1-1 c1-2 c1-19 c1-62 c1-63 c1-5b c1-2c c1-3n c1-2d c1-3o c1-1b c1-1g c1-b c1-c c1-d c1-e c1-f c1-g">
+                        <div data-ux="GridCell"
+                          class="x-el x-el-div c1-1 c1-2 c1-62 c1-aw c1-6b c1-6c c1-z c1-3d c1-3e c1-3f c1-3g c1-b c1-c c1-d c1-ax c1-ay c1-e c1-f c1-g">
+                          <div data-ux="FooterDetails" data-aid="FOOTER_COPYRIGHT_RENDERED" data-typography="DetailsGamma"
+                            class="x-el c1-az c1-1j c1-1y c1-1z c1-4y c1-2c c1-2d c1-b c1-94 c1-b0 c1-2m c1-b1 c1-95 c1-b2 c1-b3 c1-b4 x-rt">
+                            <p style="margin:0"><span>Copyright © 2024 Nitin Gokarn - All Rights Reserved.</span></p>
+                          </div>
+                        </div>
+                        <div data-ux="GridCell"
+                          class="x-el x-el-div c1-1 c1-2 c1-62 c1-aw c1-6b c1-6c c1-z c1-3d c1-3e c1-3f c1-3g c1-b c1-c c1-d c1-ax c1-ay c1-e c1-f c1-g">
+                          <p data-ux="FooterDetails" data-aid="FOOTER_POWERED_BY_RENDERED" data-typography="DetailsGamma"
+                            class="x-el x-el-p c1-az c1-1j c1-1y c1-1z c1-4y c1-9e c1-2d c1-b c1-94 c1-b0 c1-2m c1-b1 c1-b5 c1-9a c1-b2 c1-b3 c1-b4">
+                            <span>Powered by <a rel="nofollow noopener" role="link" aria-haspopup="true" data-ux="Link"
+                                target="_blank" data-aid="FOOTER_POWERED_BY_RENDERED_LINK"
+                                href="#"
+                                data-typography="LinkAlpha"
+                                class="x-el x-el-a c1-1v c1-1w c1-1x c1-1y c1-1z c1-20 c1-21 c1-9e c1-b c1-89 c1-b0 c1-27 c1-b6 c1-b7 c1-b1 c1-b5 c1-9a c1-b2 c1-b3 c1-b4"
+                                data-tccl="ux2.FOOTER.footer2.Layout.Default.Link.Default.22115.click,click">Alsahara dev</a></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="739e1199-ab84-47a1-ab94-331ae5ccb45c"
+            class="widget widget-cookie-banner widget-cookie-banner-cookie-1">
+            <div data-ux="Group" data-aid="FOOTER_COOKIE_BANNER_RENDERED" id="739e1199-ab84-47a1-ab94-331ae5ccb45c-banner"
+              class="x-el x-el-div c1-1 c1-2 c1-b8 c1-b9 c1-ba c1-4 c1-6w c1-5v c1-9h c1-5n c1-bb c1-bc c1-bd c1-be c1-bf c1-1c c1-y c1-3a c1-x c1-2c c1-3n c1-2d c1-3o c1-3h c1-b c1-c c1-bg c1-bh c1-bi c1-bj c1-bk c1-bl c1-bm c1-d c1-e c1-f c1-g">
+              <h4 role="heading" aria-level="4" data-ux="Heading" data-aid="FOOTER_COOKIE_TITLE_RENDERED"
+                data-typography="HeadingDelta"
+                class="x-el x-el-h4 c1-71 c1-2 c1-1y c1-1z c1-4e c1-3o c1-3n c1-2c c1-2d c1-2f c1-b c1-bn c1-74 c1-2m c1-76 c1-77 c1-78 c1-79">
+                This website uses cookies.</h4>
+              <div data-ux="Text" data-aid="FOOTER_COOKIE_MESSAGE_RENDERED" data-typography="BodyAlpha"
+                class="x-el c1-1 c1-2 c1-1y c1-1z c1-4y c1-2c c1-2d c1-bo c1-bb c1-b c1-bp c1-c c1-2m c1-bq c1-d c1-e c1-f c1-g x-rt">
+                <p style="margin:0"><span>We use cookies to analyze website traffic and optimize your website experience.
+                    By accepting our use of cookies, your data will be aggregated with all other user data.</span></p>
+              </div>
+              <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-19 c1-1a c1-b c1-c c1-d c1-e c1-f c1-g"><a
+                  data-ux-btn="primary" data-ux="ButtonPrimary" href="" data-aid="FOOTER_COOKIE_CLOSE_RENDERED"
+                  id="739e1199-ab84-47a1-ab94-331ae5ccb45c-accept" data-typography="ButtonAlpha"
+                  class="x-el x-el-a c1-5g c1-1j c1-5h c1-19 c1-3w c1-1f c1-21 c1-9e c1-br c1-bs c1-bt c1-3x c1-5i c1-1b c1-1g c1-1x c1-1z c1-1y c1-s c1-z c1-4 c1-2g c1-2h c1-8e c1-8g c1-bu c1-5n c1-bv c1-bw c1-b c1-56 c1-5q c1-b0 c1-bx c1-5s c1-by c1-5t c1-b1 c1-b2 c1-b3 c1-b4"
+                  data-tccl="ux2.COOKIE_BANNER.cookie1.Group.Default.Button.Primary.22116.click,click">Accept</a></div>
+            </div>
+          </div>
+          <div id="7649f1a8-1e3a-4d58-a564-e55e26c94b89" class="widget widget-popup widget-popup-popup-1"></div>
+          <div id="822d5ae4-91d2-4f47-8375-11fe8d781bc4" class="widget widget-messaging widget-messaging-messaging-1">
+            <div data-ux="Element" id="bs-3" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
+              <div data-ux="Block"
+                class="x-el x-el-div c1-1 c1-2 c1-b8 c1-bz c1-c0 c1-c1 c1-c2 c1-c3 c1-b c1-c c1-d c1-c4 c1-e c1-f c1-g">
+                <div data-ux="Block" data-aid="MESSAGING_FAB" data-edit-interactive="true"
+                  data-traffic2="pandc.vnext.editor_preview.messaging_fab_open.click"
+                  data-tccl="ux2.messaging.fab.open,click"
+                  class="x-el x-el-div c1-1 c1-2 c1-19 c1-1b c1-1f c1-21 c1-4 c1-4a c1-c5 c1-9h c1-c6 c1-c7 c1-b c1-c c1-d c1-e c1-f c1-g">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44" data-ux="Icon"
+                    class="x-el x-el-svg c1-1 c1-2 c1-9g c1-1k c1-3p c1-b c1-c c1-d c1-e c1-f c1-g">
+                    <g fill="currentColor">
+                      <rect x="4" y="6" width="16" height="10.222" rx="1.129"></rect>
+                      <path
+                        d="M8.977 18.578l.2-2.722a.564.564 0 01.564-.523h3.61c.548 0 .774.705.327 1.024l-3.81 2.721a.564.564 0 01-.89-.5z">
+                      </path>
+                    </g>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript">"IntersectionObserver" in window && "Intl" in window && "Locale" in window.Intl || document.write(`\x3Cscript src="https://img1.wsimg.com/poly/v3/polyfill.min.js?rum=0&unknown=polyfill&flags=gated&features=Intl.~locale.en-IN">\x3C/script>`)</script>
+    <script src="{% static 'js/script_1.js' %}" crossorigin=""></script>
+    <script src="{% static 'js/UX.4.37.7.js' %}" crossorigin=""></script>
+    <script src="{% static 'js/script.js' %}" crossorigin=""></script>
+    <script defer="" src="{% static 'js/scc-c2.min.js'%}" crossorigin=""></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

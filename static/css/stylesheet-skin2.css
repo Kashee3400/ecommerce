@@ -1,0 +1,109 @@
+/*-----------------------------------------------------------------------------------
+
+  Template Name: Bigshop eCommerce HTML Template
+  Author: Harnish Design
+  Author URI: http://harnishdesign.net
+ 
+-----------------------------------------------------------------------------------*/
+ 
+/*===================================================================================*/
+/*  General
+/*===================================================================================*/
+a, a b, .articleHeader span a, .pagination > li > a { color:#037ad1; }
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus { background-color:#037ad1; border-color:#037ad1; }
+a:hover, a b:hover, .category .tabs li a:hover, .sitemap li a:hover, .pagination > li > a:hover, .breadcrumb a:hover, .login-content .right a:hover, .box-category a:hover, .list-item a:hover { color:#000; }
+
+/**===== Fonts =====**/
+body{font-family:Verdana, Geneva, sans-serif;}
+.title{font-family:Bitter;}
+#menu {font-family:Bitter;}
+.subtitle, .product-tab .htabs a, .product-tab .tabs li a {font-family:Bitter;}
+#footer h5{font-family:Bitter;}
+
+/*===================================================================================*/
+/*  Header
+/*===================================================================================*/
+#header .header-row { background-color:#037ad1; padding:5px 0; }
+#header .links > ul > li > a, #header .links > ul > li .wrap_custom_block > a, #language span, #currency span, #header #top-links > ul > li > a { color:#ebf4fb; }
+#currency:hover span, #header #top-links > ul > li:hover > a, #header .links > ul > li:hover > a, #language:hover .btn-link span { color:#fff; }
+#header .links_contact > ul > li, #header .links_contact > ul > li > a { color:#ebf4fb; }
+#header .links > ul > li.wrap_custom_block > a b { border-color:#ebf4fb transparent transparent; }
+#top .dropdown-menu li a:hover, #currency ul li .currency-select:hover, #language ul li .language-select:hover{ color:#037ad1; }
+
+/**===== Search Bar =====**/
+#header #search input { background:#fff; color:#333; border-color:#fff; }
+#header #search input:focus { border-color:#fff; }
+#header .button-search { color:#565656; background-color:#fdd922; }
+
+/**===== Mini Cart =====**/
+#header #cart .heading { color:#ebf4fb; }
+#header #cart.open .heading { color:#fff; }
+#header #cart.open .heading span:after { border-color:transparent transparent #fdd922; }
+#header #cart .heading .cart-icon:before, #header #cart .heading .cart-icon:after, #header #cart .dropdown-menu { border-color:#fdd922;}
+#header #cart .heading .cart-icon { background:#fdd922;}
+
+/*===================================================================================*/
+/*  Menu
+/*===================================================================================*/
+#menu { background-color:#006eb7; border:none; }
+#menu .nav > li > a, #menu .navbar-header > span { color:#fff; text-transform:uppercase; font-size:14px; border:none; }
+#menu .nav > li:hover > a { background-color:#fff; color:#000; }
+#menu .nav > li div > ul > li > a, #menu .nav > li.menu_brands > div > div a { color:#222; }
+#menu .nav > li div > ul > li:hover > a, #menu .nav > li.mega-menu > div > .column:hover > a, #menu .nav > li.menu_brands > div > div a:hover { color:#037ad1; }
+#menu .nav > li.mega-menu > div > .column > a { color:#333; }
+
+.box-category a:hover, .list-item a:hover {color:#037ad1;}
+.subtitle {font-size:22px; color:#333; border-color:#ccc;}
+.product-tab .tabs li a {color:#333; }
+.subtitle span, .product-tab .tabs li.active a{border-color:#ccc;}
+
+/*===================================================================================*/
+/*  Product Thumb
+/*===================================================================================*/
+.product-thumb .saving { background:#fdd922; color:#333; }
+.price, .price-new { color:#037ad1; }
+.product-thumb .price-old { color:#F00; }
+.product-thumb .button-group > button { background-color:#aaa; }
+.product-thumb .button-group > button:hover { background-color:#037ad1; }
+.product-thumb .button-group .add-to-links button { color:#777; }
+.product-thumb .button-group .add-to-links button:hover { color:#000; }
+.product-grid:hover, .owl-carousel .product-thumb:hover { border-color:#aaa; }
+.btn-primary { background-color:#037ad1; }
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { background-color:#0e72b5; }
+.product-thumb .button-group .btn-primary, .product-thumb .button-group .add-to-links button { background-color:#a0a0a0; color:#fff; }
+.product-thumb .button-group .btn-primary:hover { background-color:#037ad1; }
+.product-thumb .button-group .add-to-links button:hover { background-color:#037ad1; color:#fff; }
+
+/*===================================================================================*/
+/*  Footer
+/*===================================================================================*/
+#footer .fpart-first { background-color:#f4f4f4; }
+#footer .fpart-first, #footer .fpart-first a { color:#444; }
+#footer .fpart-first a:hover { color:#037ad1; }
+#footer h5 { color:#222; font-size:16px; }
+#footer #powered { border-top:none; }
+#footer .custom-text { border-color:#ccc; }
+#footer .contact > ul > li > .fa { background-color:#fff; color:#666; }
+#footer .fpart-second { background-color:#eee; color:#333; }
+#footer .fpart-second a { color:#037ad1; }
+#footer .fpart-second a:hover { color:#000; }
+#back-top a:hover { background-color:#037ad1; }
+
+/*===================================================================================*/
+/*  Extra
+/*===================================================================================*/
+/* Feature Box */
+.feature-box .feature-icon{color: #037ad1;}
+.featured-icon{background:#037ad1;}
+
+.owl-carousel.single-slider .owl-controls .owl-buttons .owl-next:hover, .owl-carousel.single-slider .owl-controls .owl-buttons .owl-prev:hover, #back-top a:hover { background-color:#037ad1; }
+
+.faq .panel-title:hover, .sitemap li a:hover { color:#037ad1; }
+
+/**===== Blog =====**/
+.popular-tags a:hover{background:#037ad1;}
+.blog .post_title_blog a:hover, .side-item-blog .post-thumb .caption a:hover{color:#037ad1;}
+
+/*media responsive*/
+.drop-icon { color:#ebf4fb; }
+.left-top { background:#037ad1;}

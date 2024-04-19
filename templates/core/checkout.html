@@ -1,0 +1,261 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load calculation %}
+{% block title %}
+  {{user}} | Checkout
+{% endblock %}
+
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="{% url 'user_cart' %}">Shopping Cart</a>
+        </li>
+        <li>
+          <a href="{% url 'user_checkout' %}">Checkout</a>
+        </li>
+      </ul>
+
+      <div class="row">
+        {% if user.user_cart_item.all %}
+        <!-- Middle Part Start -->
+        <form action="{% url 'place_order' %}" method="post">
+          {% csrf_token %}
+          <div id="content" class="col-sm-12">
+            <h1 class="title">Checkout</h1>
+            <div class="row">
+              <div class="col-sm-4">
+                {% if user.user_address.all %}
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"><i class="fa fa-sign-in"></i> Choose Address</h4>
+                    </div>
+                    <div class="panel-body">
+                      {% for address in user.user_address.all %}
+                        <div class="radio">
+                          <label><input type="radio" value="{{ address.id }}" name="address_id" required />{{ address }}</label>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if payment_method %}
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><i class="fa fa-truck"></i> Delivery Method</h4>
+                  </div>
+                  <div class="panel-body">
+                    <p>Please select the preferred shipping method to use on this order.</p>
+                    {% for pm in payment_method %}
+                    <div class="radio">
+                      <label><input type="radio" value="{{pm.id}}" {% if not pm.is_active %}disabled{% endif %} required name='payment_method_id'/>{{pm.method}}</label>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                {% endif %}
+                {% comment %} <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><i class="fa fa-book"></i> Your Address</h4>
+                  </div>
+                  <div class="panel-body">
+                    <fieldset id="address" class="required">
+                      <div class="form-group">
+                        <label for="input-payment-company" class="control-label">Company</label>
+                        <input type="text" class="form-control" id="input-payment-company" placeholder="Company" value="" name="company" />
+                      </div>
+                      <div class="form-group required">
+                        <label for="input-payment-address-1" class="control-label">Address 1</label>
+                        <input type="text" class="form-control" id="input-payment-address-1" placeholder="Address 1" value="" name="address_1" />
+                      </div>
+                      <div class="form-group">
+                        <label for="input-payment-address-2" class="control-label">Address 2</label>
+                        <input type="text" class="form-control" id="input-payment-address-2" placeholder="Address 2" value="" name="address_2" />
+                      </div>
+                      <div class="form-group required">
+                        <label for="input-payment-city" class="control-label">City</label>
+                        <input type="text" class="form-control" id="input-payment-city" placeholder="City" value="" name="city" />
+                      </div>
+                      <div class="form-group required">
+                        <label for="input-payment-postcode" class="control-label">Post Code</label>
+                        <input type="text" class="form-control" id="input-payment-postcode" placeholder="Post Code" value="" name="postcode" />
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" checked="checked" value="1" name="shipping_address" />My delivery and billing addresses are the same.</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div> {% endcomment %}
+              </div>
+              <div class="col-sm-8">
+                <div class="row">
+                  {% comment %} <div class="col-sm-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><i class="fa fa-truck"></i> Delivery Method</h4>
+                      </div>
+                      <div class="panel-body">
+                        <p>Please select the preferred shipping method to use on this order.</p>
+                        <div class="radio">
+                          <label><input type="radio" checked="checked" name="Free Shipping" />Free Shipping - $0.00</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="Flat Shipping Rate" />Flat Shipping Rate - $8.00</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="Per Item Shipping Rate" />Per Item Shipping Rate - $150.00</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><i class="fa fa-credit-card"></i> Payment Method</h4>
+                      </div>
+                      <div class="panel-body">
+                        <p>Please select the preferred payment method to use on this order.</p>
+                        <div class="radio">
+                          <label><input type="radio" checked="checked" name="Cash On Delivery" />Cash On Delivery</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="Bank Transfer" />Bank Transfer</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="Paypal" />Paypal</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div> {% endcomment %}
+                  {% comment %} <div class="col-sm-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><i class="fa fa-ticket"></i> Use Coupon Code</h4>
+                      </div>
+                      <div class="panel-body">
+                        <label for="input-coupon" class="col-sm-3 control-label">Enter coupon code</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="input-coupon" placeholder="Enter your coupon here" value="" name="coupon" />
+                          <span class="input-group-btn"><input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-coupon" value="Apply Coupon" /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><i class="fa fa-gift"></i> Use Gift Voucher</h4>
+                      </div>
+                      <div class="panel-body">
+                        <label for="input-voucher" class="col-sm-3 control-label">Enter gift voucher code</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="input-voucher" placeholder="Enter your gift voucher code here" value="" name="voucher" />
+                          <span class="input-group-btn"><input type="submit" class="btn btn-primary" data-loading-text="Loading..." id="button-voucher" value="Apply Voucher" /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div> {% endcomment %}
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><i class="fa fa-shopping-cart"></i> Shopping cart</h4>
+                      </div>
+                      <div class="panel-body">
+                        <div class="table-responsive">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <td class="text-center">Image</td>
+                                <td class="text-left">Product Name</td>
+                                <td class="text-left">Quantity</td>
+                                <td class="text-right">Unit Price</td>
+                                <td class="text-right">Total</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              
+                                {% for item in user.user_cart_item.all %}
+                                  <tr>
+                                    <td class="text-center">
+                                      <a href="{% url 'book_detail' item.book.id %}"><img style="height: 60px; width: 60px;" src="{{item.book.book_images.first.image.url}}" alt="{{book.book.title}}" title="{{book.book.title}}" class="img-thumbnail" /></a>
+                                    </td>
+                                    <td class="text-left">
+                                      <a href="{% url 'book_detail' item.book.id %}">{{item.book.title}}</a>
+                                    </td>
+                                    <td class="text-left">
+                                      <div class="input-group btn-block" style="max-width: 200px;">
+                                        <input type="number" name="qty" value="{{item.quantity}}" class="form-control" />
+                                        <span class="input-group-btn">
+                                          
+                                          <a href="{% url 'book_detail' item.book.id %}" title="Update" class="btn btn-primary"><i class="fa fa-refresh"></i></a>
+                                          {% comment %} <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onclick=""><i class="fa fa-times-circle"></i></button> {% endcomment %}
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td class="text-right">&#8377; {{item.book|discount}}</td>
+                                    <td class="text-right">&#8377; {{item|subtotal}}</td>
+                                  </tr>
+                                {% endfor %}
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td class="text-right" colspan="4">
+                                  <strong>Total:</strong>
+                                </td>
+                                <td class="text-right">&#8377;{% total_cart_price request.user %}</td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><i class="fa fa-pencil"></i> Add Comments About Your Order</h4>
+                      </div>
+                      <div class="panel-body">
+                        <textarea rows="4" class="form-control" id="confirm_comment" name="comments"></textarea>
+                        <br />
+                        <label class="control-label" for="confirm_agree">
+                          <input type="checkbox" checked="checked" value="1" required class="validate required" id="confirm_agree" name="confirm agree" />
+                          <span>I have read and agree to the <a class="agree" href="#"><b>Terms &amp; Conditions</b></a></span>
+                        </label>
+                        <div class="buttons">
+                          <div class="pull-right">
+                        {% if user.user_address.all %}                            
+                            <input type="submit" class="btn btn-primary" value="Confirm Order" />
+                            {% else %}
+                            <a href="{% url 'address_add' %}?next={{ request.path }}" class="btn btn-primary">Add Address</a>
+
+                        {% endif %}
+
+                          </div>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        {% else %}
+        <div class="container">
+          <h4>No Product found</h4>
+        </div>
+        {% endif %}
+
+        <!-- Middle Part End -->
+      </div>
+    </div>
+  </div>
+  <!-- Content End -->
+{% endblock %}

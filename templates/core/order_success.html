@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load calculation %}
+{% block title %}
+  {{user}} | Order Placed
+{% endblock %}
+
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="#!">Order Placed</a>
+        </li>
+      </ul>
+
+      <div class="row">
+        <div id="content" class="col-sm-12">
+            <h1 class="title">Order Placed</h1>
+            <div class="row">
+              <h3>Order has been placed successfully</h3>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Content End -->
+{% endblock %}

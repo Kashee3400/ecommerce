@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+  Nitin Gokarn | Address
+{% endblock %}
+
+{% block content_main %}
+  <div id="container">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="index.html"><i class="fa fa-home"></i></a>
+        </li>
+        <li>
+          <a href="search.html">Search</a>
+        </li>
+      </ul>
+      <!-- Breadcrumb End -->
+      <div class="row">
+        <h1>Confirm Delete</h1>
+        <p>Are you sure you want to delete the address?</p>
+        <form method="post">
+          {% csrf_token %}
+          <input type="submit" value="Delete" />
+        </form>
+        <a href="{% url 'address_list' %}">Cancel</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
