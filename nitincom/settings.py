@@ -8,7 +8,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
 if DEBUG:
     SECRET_KEY = 'django-insecure-q+qu!7t#43-d)=lb_g4q8zgs0+1^(+k08c%p*#5^pk!^@e@!!3'

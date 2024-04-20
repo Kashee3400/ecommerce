@@ -1,62 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
-    Template Name: Bigshop eCommerce HTML Template
-    Author: Harnish Design
-    Author URL: http://www.harnishdesign.net
-
-===================================================================================
- Table of Contents
-===================================================================================
- 
-1. General Styles
-2.  Layout
-3.  Header
-     3.1. Language & Currency
-     3.2. Top Links
-     3.3. Mini Cart
-     3.4. Search Bar
-4.  Menu
-5.  Feature box
-6.  Breadcrumb
-7.  Category Page
-     7.1. Refine Search Category
-     7.2. Grid-List Icon
-     7.3. Produc Thumb
-     7.4. Grid Product
-     7.5. List Product
-     7.6. Rating Star
-     7.7. Pagination 
-8.  Product Page
-9.  Product Item for Left and Right Panel
-10. Category Accordion
-11. buttons
-12. Tabs
-13. Static Banner
-14. Faq Page
-15. Sitemap Page
-16. Footer
-     16.1. Footer Links
-     16.2. Contact Block
-     16.3. Payments Types
-     16.4. Social Icon
-     16.5. Powered by Text
-     16.6. Back To Top
-17. Side Blocks
-     17.1. Facebook
-     17.2. Twitter
-     17.3. Custom Side block
-     17.4. Video Box
-18. Five Grid Columns
-19. Contact Page
-20. Manufacturer Page
-21. Shortcodes
-22. Blog
-23. Extra
--------------------------------------------------------------------------------------*/
-
-/*===================================================================================*/
-/*  1. General Styles
-/*===================================================================================*/
 html {
 	overflow: -moz-scrollbars-vertical;
 	margin:0;
@@ -142,8 +84,8 @@ a:focus{ outline:none; }
 .table-container {display: table; width: 100%; table-layout: fixed;}
 .table-container .col-table-cell {display: table-cell; vertical-align: middle; float: none;}
 
-#header #logo{padding-top:23px;}
-#header #logo img { display:inline-block!important; }
+#header #logo{padding: top 0px;}
+#header #logo img { display:inline-block!important; width: 15rem; }
 
 /**===== 3.1. Language & Currency =====**/
 
@@ -190,7 +132,7 @@ a:focus{ outline:none; }
 
 /**===== 3.3. Mini Cart =====**/
 
-#header #cart {position:relative; text-align:right; margin-top:5px;}
+#header #cart {position:relative; text-align:end; margin-top:15px;}
 #header #cart .heading .cart-icon{width:16px; height:12px; background:#f15a23; position:relative; margin-right:8px; margin-top:6px;}
 #header #cart .heading .cart-icon:before{clear:both; content:' '; display:block; width:10px; height:15px; top:-7px; left:3px; border:1px solid #f15a23; border-radius:50%;  border-bottom:none; position:absolute; }
 #header #cart .heading .cart-icon:after{clear:both; content:' '; display:block; width:16px; height:9px; bottom:-4px; left:0px; border:2px solid #f15a23; border-top:none; position:absolute; border-radius:3px;}
@@ -206,7 +148,7 @@ a:focus{ outline:none; }
 
 
 /**===== 3.4. Search Bar =====**/
-#header #search { position:relative; display:block;}
+#header #search { position:relative; display:block; margin-top: 10px;}
 #header .button-search {width:36px; height:36px; font-size:14px; z-index:2; position:absolute; right:0; cursor:pointer; float:right; background:none; border:none; color:#bbb; padding:0; border-radius:0 4px 4px 0;}
 #header #search input {background:#FFF; padding:0 36px 0 10px; height:36px; font-size:13px; color:#333; outline:none; display:block; border-radius:4px;}
 #header #search input:focus{border-color:#bbb; box-shadow:none;}
@@ -480,7 +422,7 @@ border-color:#ccc;
 /* Product Thumb */
 .product-thumb .image { text-align: center; }
 .product-thumb .image a { display: block; }
-.product-thumb .image a img { display:inline-block; }
+.product-thumb .image a img { display:inline-block; height: 150px; }
 .product-thumb h4 {
 	margin:0;
 	padding-bottom:0px;
