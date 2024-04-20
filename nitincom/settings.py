@@ -159,23 +159,23 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # Default sender email address
 
 
 # configuring error log
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'file': {
-#             'level': 'ERROR',
-#             'class': 'logging.handlers.RotatingFileHandler',
-#             'filename': os.path.join(BASE_DIR, 'error.log'),  # Path to your error log file
-#             'maxBytes': 1024 * 1024 * 10,  # 10 MB
-#             'backupCount': 5,  # Keep up to 5 previous log files
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['file'],
-#             'level': 'ERROR',
-#             'propagate': True,
-#         },
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'error.log'),  # Path to your error log file
+            'maxBytes': 1024 * 1024 * 10,  # 10 MB
+            'backupCount': 5,  # Keep up to 5 previous log files
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
