@@ -1,0 +1,73 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+  Nitin Gokarn | Gallery
+{% endblock %}
+
+{% block xtra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+{% endblock xtra_css %}
+
+{% block content_main %}
+<div id="container">
+	<div class="container">
+	  <ul class="breadcrumb">
+		<li><a href="{% url 'dashboard' %}"><i class="fa fa-home"></i></a></li>
+		<li><a href="#">Gallery</a></li>
+	  </ul>
+	  
+	  <div class="row">
+		<div class="container">
+			<h1 class="text-center mt-5">Media Gallery</h1>
+			<div class="row mt-4">
+				{% for media_item in media_items %}
+				<div class="col-md-4 mb-4">
+					<div class="card">
+						{% if media_item.image %}
+						<div class="embed-responsive embed-responsive-16by9">
+							<a href="{{ media_item.image.url }}" data-fancybox="gallery">
+								<img src="{{ media_item.image.url }}" class="card-img-top img-fluid embed-responsive-item" style="max-width: 100%;" alt="...">
+							</a>
+						</div>
+							
+						{% elif media_item.image_url %}
+						<div class="embed-responsive embed-responsive-16by9">
+							<a href="{{ media_item.image_url }}" data-fancybox="gallery">
+								<img src="{{ media_item.image_url }}" class="card-img-top img-fluid embed-responsive-item" style="max-width: 100%;" alt="...">
+							</a>
+						</div>
+							
+						{% else %}
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="{{ media_item.video_url }}" allowfullscreen></iframe>
+						</div>
+						{% endif %}
+						<div class="card-body">
+							<p class="card-text">Created at: {{ media_item.created_at }}</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				
+			</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+{% endblock content_main %}
+
+{% block xtra_js %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("[data-fancybox]").fancybox({
+            // Options here
+        });
+    });
+</script>
+
+{% endblock xtra_js %}

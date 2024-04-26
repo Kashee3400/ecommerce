@@ -434,3 +434,8 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
         user.save()
         profile.save()
         return super().form_valid(form)
+
+
+def media_gallery(request):
+    media_items = MediaGallery.objects.all()
+    return render(request, 'gallery.html', {'media_items': media_items})

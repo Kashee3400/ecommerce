@@ -29,5 +29,6 @@ urlpatterns = [
     path('address/<int:pk>/delete/', views.AddressDeleteView.as_view(), name='address_delete'),
     path('place-order', views.place_order, name="place_order"),
     path('order-success', views.OrderSuccessView.as_view(), name="order_success"),
+    path('gallery', views.media_gallery, name="gallery"),
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

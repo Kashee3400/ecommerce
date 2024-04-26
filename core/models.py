@@ -17,14 +17,26 @@ class Author(models.Model):
 
     def __str__(self):
         return self.name
-
+    
+    class Meta:
+        db_table = 'tbl_author'
+        managed = True
+        verbose_name = 'Author'
+        verbose_name_plural = 'Authors'
+        
 class Publisher(models.Model):
     name = models.CharField(max_length=100)
-    website = models.URLField()
+    website = models.URLField(blank=True,null=True)
 
     def __str__(self):
         return self.name
-
+    
+    class Meta:
+        db_table = 'tbl_publisher'
+        managed = True
+        verbose_name = 'Publisher'
+        verbose_name_plural = 'Publishers'
+        
 class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -32,11 +44,23 @@ class Category(models.Model):
     def __str__(self):
         return self.name
     
+    class Meta:
+        db_table = 'tbl_category'
+        managed = True
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+        
 class Discount(models.Model):
     percentage = models.FloatField()
 
     def __str__(self):
         return f"{self.percentage}%"
+    
+    class Meta:
+        db_table = 'tbl_discunt'
+        managed = True
+        verbose_name = 'Discount'
+        verbose_name_plural = 'Discounts'
 
 from decimal import Decimal
 
@@ -98,6 +122,13 @@ class Book(models.Model):
     def is_available(self, quantity=1):
         return self.quantity_available >= quantity
     
+    class Meta:
+        db_table = 'tbl_book'
+        managed = True
+        verbose_name = 'Book'
+        verbose_name_plural = 'Books'
+
+
 from django.db.models import Sum,F,Case,When
 
 class CartItem(models.Model):
@@ -135,6 +166,12 @@ class CartItem(models.Model):
 
         return total_price
     
+    class Meta:
+        db_table = 'tbl_cart_item'
+        managed = True
+        verbose_name = 'Cart Item'
+        verbose_name_plural = 'Cart Items'
+
 import random
 import string
 
@@ -174,7 +211,7 @@ class Order(models.Model):
         (DELIVERED, 'Delivered'),
         (CANCELLED, 'Cancelled'),
     ]
-
+    
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_orders')
     status = models.CharField(max_length=20, choices=ORDER_STATUS_CHOICES, default=PENDING)
     order_comment = models.TextField(blank=True, null=True)
@@ -216,6 +253,12 @@ class Order(models.Model):
             self.save()
         else:
             raise ValueError("Cannot cancel order. Current status is Delivered or Cancelled.")
+        
+    class Meta:
+        db_table = 'tbl_order'
+        managed = True
+        verbose_name = 'Order'
+        verbose_name_plural = 'Orders'
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
@@ -236,7 +279,13 @@ class OrderItem(models.Model):
     class Meta:
         verbose_name = 'Order Item'
         verbose_name_plural = 'Order Items'
-
+        
+    class Meta:
+        db_table = 'tbl_order_item'
+        managed = True
+        verbose_name = 'Order Item'
+        verbose_name_plural = 'Order Items'
+        
 class BookImage(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name="book_images")
     image = models.ImageField(upload_to='book_images/')
@@ -244,7 +293,12 @@ class BookImage(models.Model):
     def __str__(self):
         return f"Image for {self.book.title}"
 
-
+    class Meta:
+        db_table = 'tbl_book_images'
+        managed = True
+        verbose_name = 'Book Image'
+        verbose_name_plural = 'Book Images'
+        
 class TransactionHistory(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
@@ -253,13 +307,25 @@ class TransactionHistory(models.Model):
 
     def __str__(self):
         return f"Transaction of {self.amount} for {self.order} by {self.user.username}"
-
+    
+    class Meta:
+        db_table = 'tbl_transaction_history'
+        managed = True
+        verbose_name = 'Transaction History'
+        verbose_name_plural = 'Transaction Histories'
+        
 class Wishlist(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     books = models.ManyToManyField(Book)
 
     def __str__(self):
         return f"Wishlist for {self.user.username}"
+    
+    class Meta:
+        db_table = 'tbl_wish_list'
+        managed = True
+        verbose_name = 'Wish List'
+        verbose_name_plural = 'Wish Lists'
 
 from datetime import datetime
 
@@ -298,7 +364,13 @@ class Profile(models.Model):
         self.user.last_name = last_name
         self.user.email = email
         self.user.save()
-    
+            
+    class Meta:
+        db_table = 'tbl_user_profile'
+        managed = True
+        verbose_name = 'User Profile'
+        verbose_name_plural = 'User Profiles'
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
@@ -327,4 +399,4 @@ class MediaGallery(models.Model):
         db_table = 'tbl_medias'
         managed = True
         verbose_name = 'Media Gallery'
-        verbose_name_plural = 'Media Gallerys'
+        verbose_name_plural = 'Media Galleries'
